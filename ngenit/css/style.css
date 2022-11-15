@@ -2715,6 +2715,7 @@ switch input:checked+.slider {
 }
 .solution_business_item{
     text-align: center;
+    margin: 0px;
 }
 .business_item_content a{
     color: var(--crimson);
@@ -2789,11 +2790,11 @@ switch input:checked+.slider {
 }
 
 .outcome_smail_bussiness_title h2 {
-    text-align: center;
+    font-size: 36px;
+    font-family: cursive;
+    line-height: 44px;
     color: #222;
-    font-family: lato;
-    font-weight: 700;
-    font-size: 42px;
+    text-align: center;
 }
 
 .outcome_smail_bussiness_title .lineTop {
@@ -2816,15 +2817,14 @@ switch input:checked+.slider {
 /*-----------------*/
 .solution_number_wrapper h3{
     color: #222;
-    font-size: 36px;
+    opacity: .8;
+    font-size: 32px;
     font-weight: 500;
-    font-family: lato;
-    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px 0px;
 }
 .tech_solution_wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    
 }
 
 .tech_solution_item{
@@ -2922,15 +2922,15 @@ switch input:checked+.slider {
 }
 .thing_together_wrapper h4{
     color: #fff;
-    font-size: 48px;
+    font-size: 42px;
     font-family: lato;
     font-weight: 400;
     margin-top: 30px;
 }
 .thing_together_wrapper p{
     color: #fff;
-    font-size: 32px;
-    font-family: lato;
+    font-size: 28px;
+    font-family: cursive;
     font-weight: 400;
     margin: 40px 0px;
 }

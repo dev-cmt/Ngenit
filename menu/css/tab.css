@@ -17,7 +17,7 @@
 }
 /*===========================*/
 .tabbar_wrapper{
-    border: 2px solid #ae0a46;
+    border: 1px solid #ae0a46;
     margin-top: 40px;
 }
 .data_tabs_button{
@@ -25,7 +25,8 @@
     margin: 0;
     padding: 0;
     height: 300px;
-    overflow-y: scroll;
+    margin-top: 57px;
+    overflow-y: auto;
 }
 
 .data_tabs_button button{
@@ -52,29 +53,66 @@ background: #ae0a46; */
 .data_tabs_content{
     margin: 0;
     padding: 0;
-    padding-left: 20px;
 }
-
 /*-----Sub Tab Style----*/
 .sub_tabs_button{
-    border-bottom: 1px solid silver;
-    padding-bottom: 20px;
-    margin-top: -1px;
+    border-bottom: 2px solid silver;
+    padding-top: 10px;
 }
-.sub_tabs_button button{
+/* .sub_tabs_button button{
     padding: 5px 10px;
     border: none;
     outline: none;
-    color: #fff;
+    color: #222;
     min-width: 100px;
     text-align: center;
-    background-color: #ff8a65;
+    background-color: #eee;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+} */
+.sub_tabs_button button {
+    min-width: 100px;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #eee;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid silver;
+    border-bottom: none;
 }
 .sub_tabs_button button:hover {
-    background: #da7556;
+    background: #ae0a46;
+    color: #fff;
+}
+.sub_tabs_button .active{
+    color: #fff;
 }
 .sub_tabs_content{
     margin-top: 15px;
     padding: 0px;
+    margin-left: 20px;
+}
+@media only screen and (max-width:992px) {
+    /* For mobile phones: */
+    .sub_tabs_button{
+        border-bottom: 2px solid silver;
+        padding-top: 0px;
+    }
+    .sub_tabs_button button {
+        min-width: 100px;
+        text-align: center;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        background: #eee;
+        color: #222;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 0px 0px 0px 0px;
+        border: 1px solid silver;
+        margin-top: 10px;
+    }
 }
