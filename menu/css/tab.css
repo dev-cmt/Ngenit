@@ -116,3 +116,13 @@ background: #ae0a46; */
         margin-top: 10px;
     }
 }
+@media only screen and (max-width:420px) {
+    /* For mobile phones: */
+    .sub_tabs_button{
+        border-bottom: 2px solid silver;
+        padding-top: 0px;
+    }
+    .sub_tabs_button button {
+        min-width: 100%;
+    }
+}

@@ -20,8 +20,133 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../menu/css/menu.css">
+    <script src="../menu/js/clicky-menus.js"></script>
+
+    <style>
+    .panel-title > a:before {
+        float: right !important;
+        font-family: FontAwesome;
+        content:"\f068";
+        padding-right: 5px;
+    }
+    .panel-title > a.collapsed:before {
+        float: right !important;
+        content:"\f067";
+    }
+    .panel-title > a:hover, 
+    .panel-title > a:active, 
+    .panel-title > a:focus  {
+        text-decoration:none;
+    }
+    /*-------------*/
+    .apply_item_wrapper{
+        background-color: #ae0a46;
+        padding: 10px 15px;
+        margin: 10px 0px;
+    }
+    .apply_item_wrapper a{
+        color: #fff;
+        display: block;
+    }
+    .apply_item_wrapper a:hover{
+        color: #fff;
+    }
+    .job_apply_form{
+        margin-top: 20px;
+    }
+    </style>
 </head>
 <body>
+     <!--========Menu==========-->
+     <section class="header_bottom_wrapper ">
+        <div class="nav_menu_wrapper">
+            <div class="mobile_view_wrapper">
+                <!--Logo-->
+                <div class="header_logo">
+                    <img src="images/ngenit.png" alt="">
+                </div>
+                <!--Menu icon-->
+                <div class="mobile_nav_menu">
+                    <div class="menu_icon">
+                        <a href=""><i class="fa-solid fa-user"></i><span class="ipads_menu">Account</span></a>
+                        <a href=""><i class="fa-solid fa-cart-plus"></i><span class="ipads_menu">Cart</span></a>
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i><span class="ipads_menu">Search</span></a>
+                        <a style="cursor: pointer;" onclick="switchMenuVisible();" value="Click"><i class="fa-solid fa-bars"></i><span class="ipads_menu">Menu</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Menu-->
+            <nav class="main_menu " id="Main_menu">
+                <ul class="clicky-menu">
+                    <li><a href="#"> What we do <i class="fa-solid fa-caret-down"></i></a>
+                        <!--Sub menu-->
+                        <ul class="row m-0">
+                            <li class="">
+                                    <a onclick="hide()"><span class="fa-solid fa-xmark"></span> Close</a>
+                                </li>
+                            <div class="sub_menu" id="closeDiv">
+                                <li class="col-3">
+                                    <h3 onclick="subSubMenuVisible();" value="Click">Products</h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
+                                        <a href="">Software</a>
+                                        <a href="">Hardware</a>
+                                        <a href="">View All Products</a> 
+                                    </div>
+                                    
+                                </li>
+                                <li class="col-3">
+                                    <h3 onclick="subSubMenuVisible();" value="Click">Solutions</h3>
+                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
+                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
+                                        <a href="">HealthCare</a>
+                                        <a href="">Technology</a>
+                                        <a href="">View All Solutions</a> 
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <h3 onclick="subSubMenuVisible();" value="Click">Industry</h3>
+                                    <p>Our service offerings service offerings </p>
+                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
+                                        <a href="">Technology</a>
+                                        <a href="">HealthCare</a>
+                                        <a href="">View All Products</a> 
+                                    </div>
+                                </li>
+                                <li class="col-3">
+                                    <h3 onclick="subSubMenuVisible();" value="Click">Services</h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
+                                        <a href="">Consulting services</a>
+                                        <a href="">Managed services</a>
+                                        <a href="">View All Products</a> 
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Client Stories <i class="fa-solid fa-caret-down"></i></a>
+                        <!--Sub menu-->
+                        
+                    </li>
+                    
+                    <li><a href="">Content & resources</a></li>
+                    <li><a href="">Contact & careers</a></li>
+                    <li><a href="">Shop</a></li>
+                </ul>
+            </nav>
+        
+            <!--Search-->
+            <div class="search_menu" style="flex: 0 0 15%">
+                <div class="header_search">
+                    <input type="search" placeholder="What can we help you find?">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
      <!--========Header Title==========-->
      <section class="apply_job_form_title" style="background-image: url(images/buy-category-hero.jpg);">
         <div class="container">
@@ -38,32 +163,131 @@
     <section class="container">
         <div class="apply_job_form_wrapper">
             <form action="">
-                <div class="job_apply_form"><div>
-                        <select name="" class="job_apply_select_option">
-                            <option value="Select a topic" selected="selected">Bangladesh</option>
-                            <option value="">American</option>
-                            <option value="">Australia</option>
-                            <option value="">Singapore</option>
-                            <option value="">Malaysia</option>
-                            <option value="">Yourope</option>
-                        </select>
+                <div class="row">
+                    <!--Personal Details-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseOne">Personal Details</a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Your name">
+                                    <input type="text" value="" name="" required="" placeholder="Address">
+                                    <input type="email" value="" name="" required="" placeholder="Email">
+                                    <input type="number" value="" name="" required="" placeholder="Phone number" maxlength="255" tabindex="0">
+                                    <select name="" class="job_apply_select_option">
+                                        <option value="Select a topic" selected="selected">Bangladesh</option>
+                                        <option value="">American</option>
+                                        <option value="">Australia</option>
+                                        <option value="">Singapore</option>
+                                        <option value="">Malaysia</option>
+                                        <option value="">Yourope</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="job_apply_form">
-                    <div>
-                        <input type="text" value="" name="" required="" placeholder="First name">
+                    <!--Academic Details-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseTwo">Academic Details</a>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Institute name">
+                                    <input type="text" value="" name="" required="" placeholder="Complete degree">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="job_apply_form">
-                    <div>
-                        <input type="email" value="" name="" required="" placeholder="Email address" maxlength="255" tabindex="0">
+                    <!--Professional  Details-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseThree">Professional Details</a>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="job_apply_form">
-                    <div>
-                        <input type="number" value="" name="" required="" placeholder="Phone number" maxlength="255" tabindex="0">
+                    <!--Skill-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseFour">Skill</a>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <!--Extra-Curriculum Activities-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseSix">Extra-Curriculum Activities</a>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Additional Curriculum-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseSeven">Additional Curriculum</a>
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Reference Relative-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseEight">Reference Relative</a>
+                            </div>
+                            <div id="collapseEight" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Reference Personal-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseFive">Reference Personal</a>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form">
+                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="job_apply_form">
                     <input type="file" value="" name="" required="">
@@ -74,13 +298,584 @@
                 
             </form>
         </div>
-    </section>
+    </section><br>
     <!-------------End--------->
+    <!--============Footer=============-->
+    <footer class="container-fluid p-0">
+        <!-- footyer gradient -->
+        <div class="footer_top">
+            <p>We deliver Insight Intelligent Technology Solutions™ expertise.</p>
+        </div>
+
+        <!-- main footer -->
+        <div class="footer_middle">
+            <div class="row footer_middle_wrapper">
+                <!-- item -->
+                <div class="col-lg-4 col-md-8 col-sm-12 footer_item_wrapper">
+                    <!-- title -->
+                    <h6>Newsletter</h6>
+                    <!-- text -->
+                    <p>Sign up to receive the IT content that matters most to you. You can update your preferences or unsubscribe any time.</p>
+                    <!-- button -->
+                    <button href="" class="common_button2">Sign up for our newsletter</button>
+
+                    <!-- <div class="footer_item_logo">
+                        <h6><a href="#">Read the magazine</a></h6>
+                        <img src="images/footerLogo.png" alt="">
+                    </div> -->
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6>About NgenIt</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Company overview</a></li>
+                            <li><a href="">Principal</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Products & Services</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Products</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Solutions</a></li>
+                            <li><a href="">Industry</a></li>
+                            <li><a href="">TechViews</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Features & Knowledge </h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Knowledge base</a></li>
+                            <li><a href="">NGEN IT Account</a></li>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Help And Support</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Order Helps</a></li>
+                            <li><a href="">Order Tracks</a></li>
+                            <li><a href="">Supports</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer social -->
+        <div class="social_icon_wrapper">
+            <div class="footer_social_icon">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- footer bottom -->
+
+        <div class="footer_bottom">
+            <div class="footer_bottom_wrapper">
+                <!-- copy -->
+                <div class="footer_copy">&copy NgenIt</div>
+                <!-- footer bottom list -->
+                <div class="footer_bottom_list">
+                    <ul>
+                        <li><a href="./privacy_policy.html">Privacy policy</a></li>
+                        <li><a href="./terms_policy.html">All Terms & Policies</a></li>
+                        <li><a href="./web_accessibility.html">Web Accessibility</a></li>
+                        <li><a href="./tech_glossary.html">Tech glossary</a></li>
+                        <li><a href="./sitemap.html">Sitemap</a></li>
+                        <li><label for="show_cookies">Cookies settings</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--==============Cookises Modals================-->
+    <section class="cookises_settings_wrapper">
+        
+        <input type="checkbox" id="show_cookies">
+        <!-- <label for="show_cookies">View Form</label> -->
+        
+        <!--Content Wrapper-->
+        <div class="cookises_settings_pop">
+            <label for="show_cookies" class="close-btn fas fa-times" title="close"></label>
+            <div class="modal_title_cookises">
+                <img src="images/ngenit.png" alt="">
+                <h2 class="align-middle">Privacy Preference Center</h2>
+            </div>
+            <!--------Cookies Tab content-------->
+            <div id="Cookies" class="tab_cookises_wrapper">
+                <div class="tab_cookises_settings">
+                    <button class="tablinks" onclick="openCity(event, 'Privacy')" id="defaultOpen">Your privacy</button>
+                    <button class="tablinks" onclick="openCity(event, 'Strictly')">Strictly necessary cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Performance')">Performance cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Functional')">Functional cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Targeting')">Targeting cookies</button>
+                </div>
+                
+                <div id="Privacy" class="tab_cookises_tabcontent">
+                    <h5>Your privacy</h5>
+                    <p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. You can get more information by going to our Privacy Policy or Statement in the footer of the website.</p>
+                </div>
+                
+                <div id="Strictly" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Strictly necessary cookies</h5>
+                        <h5 style="color: #ae0a46; display: inline;">Always active</h5>
+                    </div>
+                    
+                    <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms.    You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p>
+
+                    <a>Cookies details</a>
+                
+                </div>
+                
+                <div id="Performance" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Performance cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn" onclick="myCheckboxbtn()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. Most of these cookies collect and process aggregated (anonymized) information without identifying individuals. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+                
+                <div id="Functional" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Functional cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn1" onclick="myCheckboxbtn1()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages.    If you do not allow these cookies then some or all of these services may not function properly.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+                
+                <div id="Targeting" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Targeting cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn2" onclick="myCheckboxbtn2()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites.    They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+            </div>
+            <!--------Cookies Details----------->
+            <div id="Cookies_details" class="Cookies_details_wrapper">
+                <div class="cookie_list_filter row d-flex">
+                    <div class="col-4 d-flex">
+                        <label onclick="switchVisible();" value="Click" ><i class="fa-solid fa-angle-left fa-xl"></i></label>
+                        <h5>Cookie List</h5>
+                    </div>
+                    <div class="col-8 d-flex justify-content-end">
+                        <form class="cookies_search_btn d-flex" action="">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                        <button class="cookie_filter_icon"><i class="fa-solid fa-filter fa-xl"></i></button>
+                    </div>     
+                </div>
+                <div class="cookie_list_content">
+                    <div class="cookie_list_content_item">
+                        <!--====///First///====-->
+                        <button class="collapsible">First party cookies</button>
+                        <div class="content">
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                        </div><br>
+
+                        <!--====///First///====-->
+                        <button class="collapsible">exchange.mediavine.com</button>
+                        <div class="content">
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                        </div><br>
+
+                    </div>
+                    
+                    
+                </div>            
+            </div>
+            <div class="modal_footer_cookises">
+                <div class="d-flex justify-content-between">
+                    <button class="btn_footer_cookises"><strong> Confirm choices</strong></button>
+                    <!--Show & Hide butoon-->
+                    <button class="btn_footer_cookises" id="btn_show"><strong> Allow cookises</strong></button>
+                </div>
+
+                <div class="text_footer_cookises">
+                    <p>Powered by<span class="text-success h6">OneTrust</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Feedback Page-->
+    <section>
+        <div id="feedback_Sidebar" class="feedbacksidebar">
+            <div class="feedback_header_logo">
+                <button class="close_feedback" onclick="feedbackButtonClicked()"><i class="close-btn fas fa-times"></i></button>
+                <div class="modal_logo_feedback">
+                    <img src="images/ngenit.png" alt="">
+                </div>
+            </div>
+            <div style="height: 5px; width:100%; background: linear-gradient(90deg, #ae0a46, #a80b6e 25%, #582873 75%);margin: 5px 0px;"></div>
+            <div id="feedback" class="feedback_details">
+                <p>Thank you for assisting us with your feedback in this quick survey. Please take a minute to answer the questions below regarding your experience.<br><br>
+                    If you are experiencing an issue with your account, orders, or billing and want immediate assistance, please use our chat feature. </p>
+                <div class="d-flex justify-content-end">
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click">continue</button>
+                </div>
+            </div>
+            <div id="feedback_details" class="feedback_details" style="display: none;">
+                <p>What topic(s) would you like to provide feedback on?</p>
+    
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Product Details and availability
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+    
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Articles, reports, & blog content
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Purchasing, checkout & cart
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Pricing
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Solutions & services content
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Product search
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+    
+                <p>Based on your selected topic(s) above, how would you rate your overall web experience?</p>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>5 (Best)</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>4</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>3</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>2</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>1 (Worst)</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <div class="d-flex justify-content-between m-2">
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click"><i class="fa-solid fa-chevron-left"></i> previous</button>
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click">continue <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+          
+        <div id="feedback_btn">
+            <button id="sidebarButton_fb" class="openbtnfeedback" onclick="feedbackButtonClicked()"><i class="fa-solid fa-bullhorn"></i> Feedback</button>
+        </div>
+    </section>
     
 
-
-
-    <!--==================Script=====================-->
+    <!--===============Script==================-->
      <!-- jquery cdn -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      

@@ -120,6 +120,8 @@
   padding: 20px;
   background-color: #fff;
   border-top: 4px solid #ae0a46;
+  border-bottom: 4px solid silver;
+  z-index: 9999;
 }
 .sub_menu h3{
   color: #222;
