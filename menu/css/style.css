@@ -103,7 +103,13 @@
 }
 .menu_item_wrapper{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+.sub_menu_wrapper .fa-solid{
+  color: #ae0a46;
+}
+.mb_sh{
+  display: none;
 }
 /*---------------------
     Active Show-Hide
@@ -160,15 +166,24 @@
 
 
 /* Sub menu Button Design */
+.back_menu{
+  background: #eee;
+  display: none;
+}
 .sub_menu {
     display: flex;
     padding: 10px 5px;
     background-color: #fff;
     border-top: 4px solid #ae0a46;
   }
+  .colum-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0px 20px;
+  }
   .sub_menu h3{
     color: #222;
-    font-size: 18px;
+    font-size: 20px;
     font-family: arial;
   }
   .sub_menu p{
@@ -182,6 +197,7 @@
     color: #5f5753;
     background: none;
     font-size: 16px;
+    margin: 10px 0px;
     font-family: arial;
   }
   .sub_menu a:hover{
@@ -193,6 +209,23 @@
   
 
 
+  .sub_menu_footer{
+    background: #eee;
+    display: flex;
+  }
+  .sub_menu_footer_item{
+    width: 25%;
+    padding: 10px 20px;
+  }
+  .sub_menu_footer a{
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .sub_menu_footer a:hover{
+    color: #ae0a46;
+  }
   
 
 /*======================================*/
@@ -234,7 +267,7 @@
    Header Menu Wrapper 
 ========================*/
 .header_bottom_wrapper{
-  background-color: rgb(238, 238, 238);
+  background-color: #fff;
 }
 .nav_menu_wrapper{
   position: relative;
@@ -242,13 +275,11 @@
 }
 
 /*=======// Header logo //=======*/
+
 .header_logo img{
-  width:6'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  0px;
-  vertical-align: middle;
-  margin: 5px;
-  margin-left: 15px;
-  display: table-cell;
-  position: relative;
+  width: 65px;
+  margin: 2px;
+  margin-bottom: 0px;
 }
 .mobile_nav_menu{
   display: none;
@@ -276,42 +307,202 @@
 }
 
 /*========// Main Manu //========*/
-
+.nav_menu_wrapper{
+  position: relative;
+  display: block;
+  justify-content: space-between;
+  border-bottom: 4px solid #efefef;
+}
 .menu_item_wrapper{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  
+  border-top: 4px solid #ae0a46;
+}
+.mb_sh{
+  display: block;
 }
 /*---------------------
+      Menu Style
+----------------------*/
+.menu_item_wrapper{
+  display: block;
+}
+.menu_item{
+  margin-bottom: -0px;
+  border-bottom: none;
+}
+.menu_item button{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: .4s;
+  width: 100%;
+  text-align: start;
+  border-bottom: 1px solid silver;
+}
+.menu_item button:hover{
+  border: none;
+  background: none;
+  padding: 10px 23px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #ae0a46;
+}
+.menu_item button:focus{
+  
+}
+
+.back_button_style{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: .4s;
+  width: 100%;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+/* Sub menu Button Design */
+.back_menu{
+  background: #eee;
+  display: block;
+  border-bottom: 1px solid silver;
+}
+.sub_menu {
+    display: block;
+    padding: 0px;
+    background-color: #fff;
+    border-top: none;
+  }
+.colum-12 {
+  flex: 0 0 25%;
+  max-width: 100%;
+  padding: 0px;
+}
+  .sub_menu h3{
+    color: #222;
+    font-size: 14px;
+    font-family: arial;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    padding: 5px 20px;
+    margin: 0px;
+    transition: .4s;
+  }
+  .sub_menu h3:hover{
+    border-bottom: 1px solid #ae0a46;
+    padding: 5px 22px;
+  }
+  .sub_menu p{
+    color: #5f5753;
+    background: none;
+    font-size: 16px;
+    font-family: arial;
+    display: none;
+  }
+  .sub_menu a{
+    display: block;
+    color: #5f5753;
+    background: none;
+    font-size: 16px;
+    margin: 10px 0px;
+    font-family: arial;
+  }
+  .sub_menu a:hover{
+    color: #6f062d;
+    border-bottom: none;
+    background: none;
+    text-decoration: none;
+  }
+  
+.sub_menu_wrapper{
+  position: relative;
+}
+.sub_sub_item{
+  background: #fff;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.sub_sub_item a{
+  padding: 2px 30px;
+  margin: 0px;
+  font-size: 14px;
+  background-color: #eee;
+  border-bottom: 1px solid silver;
+  transition: .4s;
+}
+.sub_sub_item a:hover{
+  padding: 2px 32px;
+  border-bottom: 1px solid #ae0a46;
+}
+
+
+/*=======================*/
+  .sub_menu_footer{
+    background: #fff;
+    display: block;
+  }
+  .sub_menu_footer_item{
+    width: 100%;
+    padding: 3px 10px;
+    border-bottom: 1px solid silver;
+  }
+  .sub_menu_footer a{
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  .sub_menu_footer a:hover{
+    color: #ae0a46;
+  }
+/*---------------------
     Active Show-Hide
+    Dont Change That
 ----------------------*/
 .sub_menu_wrapper {
   z-index: 100;
   display:none;
   opacity:0;
-  background-color: #eee;
+  background-color: #fff;
   position: absolute;
-  top: 56px;
+  top: 44px;
   right: 0;
+  width: 100%;
+  height: 100%;
 }
 .menu_btn_active {
   opacity: 1;
   display:block;
 }
+/*-------sub sub-------*/
+.item{
+  margin:5px;
+  border:1px solid #efefef;
+  padding:5px;
+}
+.hidden{
+  display:none;
+}
 /*---------End-------*/
 
 /*=======/// Script Show Hide///=======*/
-
-.show_flex{
-  display: flex;
-}
-.sub_sub_menu_hide{
+.display_none{
   display: none;
 }
-.sub_sub_menu_show{
-  display: inline-block;
-}
-.main_menu{
-  display: none;
+.display_block{
+  display: block;
 }
 /*=========/// Script Show Hide///========*/
 

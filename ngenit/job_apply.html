@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../menu/css/menu.css">
-    <script src="../menu/js/clicky-menus.js"></script>
+    <script src="js/javascript.mr.js"></script>
 
     <style>
     .panel-title > a:before {
@@ -40,120 +40,19 @@
         text-decoration:none;
     }
     /*-------------*/
-    .apply_item_wrapper{
-        background-color: #ae0a46;
-        padding: 10px 15px;
-        margin: 10px 0px;
-    }
-    .apply_item_wrapper a{
-        color: #fff;
-        display: block;
-    }
-    .apply_item_wrapper a:hover{
-        color: #fff;
-    }
-    .job_apply_form{
-        margin-top: 20px;
-    }
+
     </style>
 </head>
 <body>
      <!--========Menu==========-->
-     <section class="header_bottom_wrapper ">
-        <div class="nav_menu_wrapper">
-            <div class="mobile_view_wrapper">
-                <!--Logo-->
-                <div class="header_logo">
-                    <img src="images/ngenit.png" alt="">
-                </div>
-                <!--Menu icon-->
-                <div class="mobile_nav_menu">
-                    <div class="menu_icon">
-                        <a href=""><i class="fa-solid fa-user"></i><span class="ipads_menu">Account</span></a>
-                        <a href=""><i class="fa-solid fa-cart-plus"></i><span class="ipads_menu">Cart</span></a>
-                        <a href=""><i class="fa-solid fa-magnifying-glass"></i><span class="ipads_menu">Search</span></a>
-                        <a style="cursor: pointer;" onclick="switchMenuVisible();" value="Click"><i class="fa-solid fa-bars"></i><span class="ipads_menu">Menu</span></a>
-                    </div>
-                </div>
-            </div>
 
-            <!--Menu-->
-            <nav class="main_menu " id="Main_menu">
-                <ul class="clicky-menu">
-                    <li><a href="#"> What we do <i class="fa-solid fa-caret-down"></i></a>
-                        <!--Sub menu-->
-                        <ul class="row m-0">
-                            <li class="">
-                                    <a onclick="hide()"><span class="fa-solid fa-xmark"></span> Close</a>
-                                </li>
-                            <div class="sub_menu" id="closeDiv">
-                                <li class="col-3">
-                                    <h3 onclick="subSubMenuVisible();" value="Click">Products</h3>
-                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
-                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
-                                        <a href="">Software</a>
-                                        <a href="">Hardware</a>
-                                        <a href="">View All Products</a> 
-                                    </div>
-                                    
-                                </li>
-                                <li class="col-3">
-                                    <h3 onclick="subSubMenuVisible();" value="Click">Solutions</h3>
-                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
-                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
-                                        <a href="">HealthCare</a>
-                                        <a href="">Technology</a>
-                                        <a href="">View All Solutions</a> 
-                                    </div>
-                                </li>
-                                <li class="col-3">
-                                    <h3 onclick="subSubMenuVisible();" value="Click">Industry</h3>
-                                    <p>Our service offerings service offerings </p>
-                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
-                                        <a href="">Technology</a>
-                                        <a href="">HealthCare</a>
-                                        <a href="">View All Products</a> 
-                                    </div>
-                                </li>
-                                <li class="col-3">
-                                    <h3 onclick="subSubMenuVisible();" value="Click">Services</h3>
-                                    <p>Our service offerings drive new business outcomes.</p>
-                                    <div class="sub_sub_menu_hide" id="SubSub_Menu">
-                                        <a href="">Consulting services</a>
-                                        <a href="">Managed services</a>
-                                        <a href="">View All Products</a> 
-                                    </div>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li><a href="#">Client Stories <i class="fa-solid fa-caret-down"></i></a>
-                        <!--Sub menu-->
-                        
-                    </li>
-                    
-                    <li><a href="">Content & resources</a></li>
-                    <li><a href="">Contact & careers</a></li>
-                    <li><a href="">Shop</a></li>
-                </ul>
-            </nav>
-        
-            <!--Search-->
-            <div class="search_menu" style="flex: 0 0 15%">
-                <div class="header_search">
-                    <input type="search" placeholder="What can we help you find?">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
      <!--========Header Title==========-->
      <section class="apply_job_form_title" style="background-image: url(images/buy-category-hero.jpg);">
         <div class="container">
             <div class="d-flex justify-content-center">
                 <span></span>
             </div>
-            <h1>Apply for a job</h1>
+            <h1>Registration for a job</h1>
         </div>
         
     </section>
@@ -164,70 +63,193 @@
         <div class="apply_job_form_wrapper">
             <form action="">
                 <div class="row">
-                    <!--Personal Details-->
+                    <!--Personal Details (1)-->
                     <div class="col-lg-6 col-sm-12">
                         <div class="apply_item_wrapper">
                             <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseOne">Personal Details</a>
+                                <a class="" data-toggle="collapse" aria-expanded="true" href="#collapseOne">Personal Details</a>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse">
+                            <div id="collapseOne" class="panel-collapse collapse show">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Your name">
-                                    <input type="text" value="" name="" required="" placeholder="Address">
-                                    <input type="email" value="" name="" required="" placeholder="Email">
-                                    <input type="number" value="" name="" required="" placeholder="Phone number" maxlength="255" tabindex="0">
-                                    <select name="" class="job_apply_select_option">
-                                        <option value="Select a topic" selected="selected">Bangladesh</option>
-                                        <option value="">American</option>
-                                        <option value="">Australia</option>
-                                        <option value="">Singapore</option>
-                                        <option value="">Malaysia</option>
-                                        <option value="">Yourope</option>
-                                    </select>
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Your name">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Address">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="email" value="" name="" required="" placeholder="Email">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" value="" name="" required="" placeholder="Phone number" maxlength="255" tabindex="0">
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="" class="job_apply_select_option">
+                                            <option disabled selected="selected">District</option>
+                                            <option value="">American</option>
+                                            <option value="">Australia</option>
+                                            <option value="">Singapore</option>
+                                            <option value="">Malaysia</option>
+                                            <option value="">Yourope</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="" class="job_apply_select_option">
+                                            <option disabled selected="selected">Country</option>
+                                            <option value="">American</option>
+                                            <option value="">Australia</option>
+                                            <option value="">Singapore</option>
+                                            <option value="">Malaysia</option>
+                                            <option value="">Yourope</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Academic Details-->
+                    <!--Professional Training (1)-->
                     <div class="col-lg-6 col-sm-12">
                         <div class="apply_item_wrapper">
                             <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseTwo">Academic Details</a>
+                                <a class="" data-toggle="collapse" href="#collapseOne">Professional Training</a>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
+                            <div id="collapseOne" class="panel-collapse collapse show">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Institute name">
-                                    <input type="text" value="" name="" required="" placeholder="Complete degree">
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-8">
+                                        <input type="text" value="" name="" required="" placeholder="Training Institute name (1)">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Topics Covered">
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" value="" name="" required="" placeholder="Training Institute name (2)">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Topics Covered">
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="text" value="" name="" required="" placeholder="Training Institute name (3)">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Topics Covered">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Professional  Details-->
+                    <!--Professional  Details (2)-->
                     <div class="col-lg-6 col-sm-12">
                         <div class="apply_item_wrapper">
                             <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseThree">Professional Details</a>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                                <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Skill-->
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="apply_item_wrapper">
-                            <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseFour">Skill</a>
+                                <a class="collapsed" data-toggle="collapse" href="#collapseFour">Professional Details</a>
                             </div>
                             <div id="collapseFour" class="panel-collapse collapse">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Company Name (Experience 1)">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Department">
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="text-white">Start Date:</span>
+                                        <input type="date" value="" name="">
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="text-white pl-2">End Date :</span>
+                                        <input type="date" value="" name="">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="m-2" for=""></label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Company Name (Experience 1)">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Department">
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="text-white">Start Date:</span>
+                                        <input type="date" value="" name="">
+                                    </div>
+                                    <div class="col-6">
+                                        <span class="text-white pl-2">End Date :</span>
+                                        <input type="date" value="" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Academic Details (2)-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseFour">Academic Details</a>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Institute Name (Academic 1)">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Exam/Degree Title">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Year of Passing">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Result/CGPA">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="m-2" for=""></label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Institute Name (Academic 2)">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Exam/Degree Title">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Year of Passing">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Result/CGPA">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Skill Set-->
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="apply_item_wrapper">
+                            <div class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseSix">Skill Set</a>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse">
+                                <!--form item-->
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Skill in">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -240,27 +262,30 @@
                             </div>
                             <div id="collapseSix" class="panel-collapse collapse">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities One">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities Two">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities Three">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities Four">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities Five">
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" value="" name="" required="" placeholder="Activities Six">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Additional Curriculum-->
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="apply_item_wrapper">
-                            <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseSeven">Additional Curriculum</a>
-                            </div>
-                            <div id="collapseSeven" class="panel-collapse collapse">
-                                <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Reference Relative-->
+                    <!--Professional Reference-->
                     <div class="col-lg-6 col-sm-12">
                         <div class="apply_item_wrapper">
                             <div class="panel-title">
@@ -268,29 +293,63 @@
                             </div>
                             <div id="collapseEight" class="panel-collapse collapse">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                <div class="job_apply_form row mt-2">
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Name">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Organization">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="email" value="" name="" required="" placeholder="Email">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Mobile Number">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Reference Personal-->
+                    <!--Relative Reference-->
                     <div class="col-lg-6 col-sm-12">
                         <div class="apply_item_wrapper">
                             <div class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" href="#collapseFive">Reference Personal</a>
+                                <a class="collapsed" data-toggle="collapse" href="#collapseEight">Reference Personal</a>
                             </div>
-                            <div id="collapseFive" class="panel-collapse collapse">
+                            <div id="collapseEight" class="panel-collapse collapse mt-2">
                                 <!--form item-->
-                                <div class="job_apply_form">
-                                    <input type="text" value="" name="" required="" placeholder="Experience">
+                                <div class="job_apply_form row">
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Name">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Organization">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Email">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" value="" name="" required="" placeholder="Mobile Number">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="job_apply_form">
-                    <input type="file" value="" name="" required="">
+                <div class="job_apply_form row">
+                    <div class="col-lg-6 col-sm-12">
+                        <input type="file" value="" name="" required="">
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="row linkdin_profile_link">
+                            <div class="col-4">
+                                <label class="text-dark">Linkedin Profile</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="url" value="" name="" required="" placeholder="https://www.linkedin.com">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="job_submit_btn">Submit</button>
@@ -442,12 +501,12 @@
                     <button class="tablinks" onclick="openCity(event, 'Targeting')">Targeting cookies</button>
                 </div>
                 
-                <div id="Privacy" class="tab_cookises_tabcontent">
+                <div id="Privacy" class="tab_cookises_tabcontent" style="display:block">
                     <h5>Your privacy</h5>
                     <p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. You can get more information by going to our Privacy Policy or Statement in the footer of the website.</p>
                 </div>
                 
-                <div id="Strictly" class="tab_cookises_tabcontent">
+                <div id="Strictly" class="tab_cookises_tabcontent"  style="display:none">
                     <div class="d-flex justify-content-between">
                         <h5>Strictly necessary cookies</h5>
                         <h5 style="color: #ae0a46; display: inline;">Always active</h5>
@@ -459,7 +518,7 @@
                 
                 </div>
                 
-                <div id="Performance" class="tab_cookises_tabcontent">
+                <div id="Performance" class="tab_cookises_tabcontent" style="display:none">
                     <div class="d-flex justify-content-between">
                         <h5>Performance cookies</h5>
                         <label class="switch">
@@ -473,7 +532,7 @@
                     <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
                 </div>
                 
-                <div id="Functional" class="tab_cookises_tabcontent">
+                <div id="Functional" class="tab_cookises_tabcontent" style="display:none">
                     <div class="d-flex justify-content-between">
                         <h5>Functional cookies</h5>
                         <label class="switch">
@@ -487,7 +546,7 @@
                     <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
                 </div>
                 
-                <div id="Targeting" class="tab_cookises_tabcontent">
+                <div id="Targeting" class="tab_cookises_tabcontent" style="display:none">
                     <div class="d-flex justify-content-between">
                         <h5>Targeting cookies</h5>
                         <label class="switch">
@@ -877,10 +936,6 @@
 
     <!--===============Script==================-->
      <!-- jquery cdn -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     
-    <!-- slick slider -->
-    <script src="js/slick.min.js"></script> 
-    <script src="js/mains.js"></script>
+ 
 </body>
 </html>

@@ -21,6 +21,7 @@
     <!-- Demo CSS (No need to include it into your project) -->
 </head>
 <body>
+  
     <section class="header_bottom_wrapper ">
         <div class="nav_menu_wrapper">
             <div class="mobile_view_wrapper d-flex justify-content-between">
@@ -40,48 +41,61 @@
             </div>
 
             <!--Menu-->
-            <nav class="main_menu" id="Main_menu">
+            <nav class="display_none" id="Main_menu">
                 <div class="menu_item_wrapper">			
                     <div class="menu_item">			
-                        <button class="country-btn-portugal">What we do</button>     
+                        <button class="country-btn-portugal">What we do <i class="fa-solid fa-caret-down"></i></button>     
                         <div class="manege_nav sub_menu_wrapper mr-animate-left">
                             <!--Sub menu-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
                             <div class="sub_menu">
-                                <div class="col-3">
-                                    <h3>Products</h3>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Products <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
                                     <p>Harness the power of technology to achieve your most ambitious goals.</p>
-                                    <div class="sub_sub_menu_hide">
-                                        <a href="">Software</a>
-                                        <a href="">Hardware</a>
-                                        <a href="">View All Products</a> 
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Software <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Hardware <i class="fa-solid fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <h3>Solutions</h3>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Solutions <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
                                     <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
-                                    <div class="sub_sub_menu_hide">
-                                        <a href="">HealthCare</a>
-                                        <a href="">Technology</a>
-                                        <a href="">View All Solutions</a> 
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">HealthCare <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Technology <i class="fa-solid fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <h3>Industry</h3>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Industry <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
                                     <p>Our service offerings service offerings </p>
-                                    <div class="sub_sub_menu_hide">
-                                        <a href="">Technology</a>
-                                        <a href="">HealthCare</a>
-                                        <a href="">View All Products</a> 
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Technology <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">HealthCare <i class="fa-solid fa-angle-right"></i></a>
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <h3 >Services</h3>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Services <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
                                     <p>Our service offerings drive new business outcomes.</p>
-                                    <div class="sub_sub_menu_hide">
-                                        <a href="">Consulting services</a>
-                                        <a href="">Managed services</a>
-                                        <a href="">View All Products</a> 
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Consulting services <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Managed services <i class="fa-solid fa-angle-right"></i></a>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Products</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Solutions</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industry</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industry</a> 
                                 </div>
                             </div>
                         </div>
@@ -157,7 +171,7 @@
         console.log($dd, this); 
         $('.manege_nav').not($dd).removeClass('menu_btn_active');
         $dd.toggleClass('menu_btn_active');
-    }
+    };
 
 	//open menu
 	$('.country-btn-portugal').click(fnClick);
@@ -171,16 +185,25 @@
     //--Mobile Menu
     function switchMenuVisible() {
     
-    var query = document.getElementById('Main_menu');
-    if (query.classList.contains('main_menu')) {
-        query.classList.remove('main_menu'); 
-        query.classList.add('show_flex'); 
-    } 
-    else{
-            query.classList.remove('show_flex'); 
-            query.classList.add('main_menu'); 
-    }
-}
+        var query = document.getElementById('Main_menu');
+        if (query.classList.contains('display_none')) {
+            query.classList.remove('display_none'); 
+            query.classList.add('display_block'); 
+        } 
+        else{
+                query.classList.remove('display_block'); 
+                query.classList.add('display_none'); 
+        }
+    };
+    //----- Sub Sub Menu Show Hide
+    [].slice.call(document.querySelectorAll('.toggleDetails')).forEach(function(e){e.onclick = function(){
+        this.parentElement.querySelector('.details').classList.toggle('hidden')
+    }});
+
+    //----Close
+    function hide(){  
+        document.getElementById('closeDiv').style.display = 'none'; 
+    };
 
 </script>
 </body>

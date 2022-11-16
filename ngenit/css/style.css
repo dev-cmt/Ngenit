@@ -301,12 +301,34 @@ a {
 .apply_job_form_wrapper{
     margin-top: 50px;
 }
-/*----------Text Tyoe------------*/
+.job_apply_form label{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+.apply_item_wrapper{
+    background-color: #ae0a46;
+    padding: 10px 15px;
+    margin: 10px 0px;
+}
+.apply_item_wrapper a{
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+.apply_item_wrapper a:hover{
+    color: #fff;
+}
+.job_apply_form{
+    margin-top: 0px;
+}
+/*----------Text Type------------*/
 .job_apply_select_option{
     display: block;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 2px 10px;
+    margin-bottom: 5px;
     border: none;
     border-bottom: 2px solid silver;
     color: rgb(125, 125, 125);
@@ -316,15 +338,15 @@ a {
     outline: none;
     border-bottom: 2px solid var(--crimson);
 }
-/*----------Text Tyoe------------*/
+/*----------Text Type------------*/
 .job_apply_form input[type=text] {
     color: transparent;
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    padding: 2px 10px;
+    margin-bottom: 5px;
     color: black;
     border: none;
-    padding: 10px;
     border-bottom: 2px solid silver;
   }
 .job_apply_form input[type=text]:focus {
@@ -337,10 +359,10 @@ a {
     color: transparent;
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    padding: 2px 10px;
+    margin-bottom: 5px;
     color: black;
     border: none;
-    padding: 10px;
     border-bottom: 2px solid silver;
   }
 .job_apply_form input[type=email]:focus {
@@ -354,10 +376,10 @@ a {
     color: transparent;
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    padding: 2px 10px;
+    margin-bottom: 5px;
     color: black;
     border: none;
-    padding: 10px;
     border-bottom: 2px solid silver;
   }
 .job_apply_form input[type=number]:focus {
@@ -366,6 +388,31 @@ a {
     
     border-bottom: 2px solid var(--crimson);
 }
+  /*---------Date Type-------------*/
+  .job_apply_form span{
+    width: 40%;
+    border: 1px solid #fff;
+    padding: 4px 6px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .job_apply_form input[type=date] {
+    color: transparent;
+    display: inline;
+    width: 60%;
+    padding: 2px 10px;
+    margin-bottom: 5px;
+    color: black;
+    border: none;
+    border-bottom: 2px solid silver;
+    text-align: end;
+  }
+.job_apply_form input[type=date]:focus {
+    border: none;
+    outline: none;   
+    border-bottom: 2px solid var(--crimson);
+}
+
   /*----------File Type------------*/
 .job_apply_form input[type=file] {
     color: transparent;
@@ -404,8 +451,32 @@ a {
 .job_apply_form input[type=file]:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
 }
+
+/*----------Url Type------------*/
+.linkdin_profile_link{
+    border: 1px solid silver;
+    margin: 0px;
+    margin-top: 20px;
+}
+.linkdin_profile_link label{
+    padding: 10px;
+    width: 100%;
+    margin: 0px;
+}
+.job_apply_form input[type=url]{
+    padding: 10px 0px 10px 15px;
+    border: none;
+    outline: none;
+    border-left: 1px solid silver;
+    width: 100%;
+}
+.job_apply_form input[type=url]:focus{
+    border-left: .5px solid #ae0a46;
+}
+
+
 .job_submit_btn{
-    margin-top: 10px;
+    margin-top: 40px;
     padding: 10px 40px;
     cursor: pointer;
     font-family: "klinic-slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

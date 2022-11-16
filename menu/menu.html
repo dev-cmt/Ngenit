@@ -25,6 +25,15 @@
     <!-- Clicky Menus CSS -->
     <link rel="stylesheet" href="css/menu.css">
 
+
+    <style>.item{
+        margin:5px;
+        border:1px solid #efefef;
+        padding:5px;
+      }
+      .hidden{
+        display:none;
+      }</style>
     <!-- Demo CSS (No need to include it into your project) -->
 </head>
 <body>
@@ -132,12 +141,40 @@
         </section>
     </header>
 
+    <h3 class="toggleDetails btn btn-primary">Products</h3>
+    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+    <div class="details sub_sub_item">
+        <div class="back_menu">
+            <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+        </div>
+        <a href="">Software <i class="fa-solid fa-angle-right"></i></a>
+        <a href="">Hardware <i class="fa-solid fa-angle-right"></i></a>
+    </div>
 
 
 
 
+    <div class="item">
+        <div class="details hidden">
+          Edit Details
+          <input name="details" placeholder="1"/>
+        </div>
+        <span class="toggleDetails">Details</span>
+      </div>
+      <div class="item">
+        <div class="details hidden">
+          Edit Details
+          <input name="details" placeholder="2"/>
+        </div>
+        <span class="toggleDetails">Details</span>
+      </div>
 
 
+      <script>
+        [].slice.call(document.querySelectorAll('.toggleDetails')).forEach(function(e){e.onclick = function(){
+	this.parentElement.querySelector('.details').classList.toggle('hidden')
+}})
+      </script>
     <!--==================Script=====================-->
 
     
