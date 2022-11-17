@@ -1,3 +1,81 @@
+/*================/// Nav Menu Style page ///==============*/
+//--Menu Open & hide
+function fnClick(e){
+    var $dd = $(this).next();
+    console.log($dd, this); 
+    $('.manege_nav').not($dd).removeClass('menu_btn_active');
+    $dd.toggleClass('menu_btn_active');
+};
+
+//open menu
+$('.country-btn-portugal').click(fnClick);
+$('.country-btn-uk').click(fnClick);
+
+//close if menu clicked
+$('#mclose').click(()=>{ 
+  $('.manege_nav').removeClass('menu_btn_active');
+});
+
+//--Mobile Menu
+function switchMenuVisible() {
+
+    var query = document.getElementById('Main_menu');
+    if (query.classList.contains('display_none')) {
+        query.classList.remove('display_none'); 
+        query.classList.add('display_block'); 
+    } 
+    else{
+            query.classList.remove('display_block'); 
+            query.classList.add('display_none'); 
+    }
+};
+
+//----- Sub Sub Menu Show Hide
+[].slice.call(document.querySelectorAll('.toggleDetails')).forEach(function(e){e.onclick = function(){
+    this.parentElement.querySelector('.details').classList.toggle('hidden')
+}});
+
+//----Close (not use)
+function hide(){  
+    document.getElementById('closeDiv').style.display = 'none'; 
+};
+
+//-----Search Mobile
+function switchSearchVisible() {
+
+    var query = document.getElementById('Search_menu');
+    if (query.classList.contains('display_none')) {
+        query.classList.remove('display_none'); 
+        query.classList.add('display_block'); 
+    } 
+    else{
+            query.classList.remove('display_block'); 
+            query.classList.add('display_none'); 
+    }
+};
+function iconMenu() {
+    var query = document.getElementById('iconMenu');
+    if (query.classList.contains('fa-bars')) {
+        query.classList.remove('fa-bars'); 
+        query.classList.add('fa-xmark'); 
+    } 
+    else{
+            query.classList.remove('fa-xmark'); 
+            query.classList.add('fa-bars'); 
+    }
+};
+function iconSearch() {
+    var query = document.getElementById('iconSearch');
+    if (query.classList.contains('fa-magnifying-glass')) {
+        query.classList.remove('fa-magnifying-glass'); 
+        query.classList.add('fa-xmark'); 
+    } 
+    else{
+            query.classList.remove('fa-xmark'); 
+            query.classList.add('fa-magnifying-glass'); 
+    }
+};
+
 /*================///User Dashboar Sidebar page ///==============*/
 var lastState = false;
 

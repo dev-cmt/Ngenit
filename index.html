@@ -2,430 +2,1409 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report - Motiur</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NgenIt Corporate</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="Hasiful/assets/css/slick.css">
+    <link rel="stylesheet" href="Hasiful/assets/css/slick-theme.css">
 
-  <link rel="icon" type="image/x-icon" href="java-script/images/favicon-report.png">
-
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <!-- fontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-  <!-- bootstrap link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-  <style>
-    .animate-charcter {
-      text-transform: uppercase;
-      background-image: linear-gradient(-225deg,
-          #231557 0%,
-          #44107a 29%,
-          #ff1361 67%,
-          #fff800 100%);
-      background-size: auto auto;
-      background-clip: border-box;
-      background-size: 200% auto;
-      color: #fff;
-      background-clip: text;
-      text-fill-color: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: textclip 2s linear infinite;
-      display: inline-block;
-      font-size: 65px;
-    }
-
-    @keyframes textclip {
-      to {
-        background-position: 200% center;
-      }
-    }
-
-    .btn {
-      color: white;
-      font-weight: bold;
-    }
-  </style>
+    <!-- css link -->
+    <!-- <link rel="stylesheet" href="Hasiful/assets/css/main.css"> -->
+    <!-- <link rel="stylesheet" href="Hasiful/assets/css/global.css"> -->
+    <!-- <link rel="stylesheet" href="Hasiful/assets/css/responsive.css"> -->
+    
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="ngenit/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="ngenit/lib/font-awesome/css/font-awesome.css">
+    
+    <link rel="stylesheet" href="ngenit/css/style.css">
+    <link rel="stylesheet" href="ngenit/css/main.css">
+    
 </head>
 
 <body>
-  <Section class="container-fluid">
-    <span style="color:blueviolet"></span>
+    <!--======// Nav Menu //========-->
+    <section class="header_top_menu_wrapper">
+        <div class="header_top_menu">
+            <div class="header_top_menu_item">
+                <button href="">Login</button>
+                <button href="">Tools <i class="fa-solid fa-caret-down"></i></button>
+                <button href="">Support <i class="fa-solid fa-caret-down"></i></button>
+                <button class="add_cart"><i class="fa-solid fa-cart-plus fa-1x"></i><span class="add_cart_count">1</span></button>
+            </div>
+        </div>
+    </section>
+    <section class="header_bottom_wrapper ">
+        <div class="nav_menu_wrapper">
+            <div class="mobile_view_wrapper d-flex justify-content-between">
+                <!--Logo-->
+                <div class="header_logo">
+                    <img src="ngenit/images/ngenit.png" alt="">
+                </div>
+                <!--Menu icon-->
+                <div class="mobile_nav_menu">
+                    <div class="menu_icon">
+                        <a href=""><i class="fa-solid fa-user"></i><span class="ipads_menu">Account</span></a>
+                        <a href=""><i class="fa-solid fa-cart-plus"></i><span class="ipads_menu">Cart</span></a>
+                        <a onclick="switchSearchVisible();" value="Click"><i class="fa-solid fa-magnifying-glass" id="iconSearch" onclick="iconSearch();"></i><span class="ipads_menu">Search</span></a>
+                        <a onclick="switchMenuVisible();" value="Click"><i  class="fa-solid fa-bars" id="iconMenu" onclick="iconMenu()"></i><span class="ipads_menu">Menu</span></a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container">
-      <div class="col-md-12 text-center">
-        <h4 class="animate-charcter" style="font-family: Audiowide">NGENT IT</h4>
-      </div>
-    </div>
+            <!--Menu-->
+            <nav class="display_none" id="Main_menu">
+                <div class="menu_item_wrapper">			
+                    <div class="menu_item">			
+                        <button class="country-btn-portugal">Our Services <i class="fa-solid fa-caret-down"></i></button>     
+                        <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                            <!--Sub menu-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
+                            <div class="sub_menu">
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Products <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Software <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Hardware <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Digital Services <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Developments <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Solutions <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Smart City <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">IoT, AI, Aerobotics <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Industry <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings service offerings </p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Financial <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Healthcare <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Manufacturing <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Public sector <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Services <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Consulting services <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Managed services <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Digital HR Services <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Support Services <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Products</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Solutions</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industry</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industry</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_item">			
+                        <button class="country-btn-portugal">Tech Contents <i class="fa-solid fa-caret-down"></i></button>     
+                        <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                            <!--Sub menu 2-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
+                            <div class="sub_menu">
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Industry <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Education <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Healthcare <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Manufacturing <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Public sector <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Solution <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Modern infrastructure <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Networking <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Procurement <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Real-time data <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Technology <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings service offerings </p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">AI & IoT <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">IT optimization <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Cloud <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Cybersecurity <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Contents <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Analyst Report <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Article <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Client story <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Tech Journal <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industries</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Solutions</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Technology</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Contents</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_item">			
+                        <button class="country-btn-portugal">Partner & Clients <i class="fa-solid fa-caret-down"></i></button>     
+                        <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                            <!--Sub menu 3-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
+                            <div class="sub_menu">
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Partners <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Bangladesh <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Nepal <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Bhutan <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Myanmar <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Clients <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Public Sector <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Academic <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">FMG <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">MNC <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Principals <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings service offerings </p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Software <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Hardware <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Solution <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Service <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Investors <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>No Data</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Empty <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Partners</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Clients</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Principals</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Investors</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_item">			
+                        <button class="country-btn-portugal">Connect Us <i class="fa-solid fa-caret-down"></i></button>     
+                        <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                            <!--Sub menu 4-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
+                            <div class="sub_menu">
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Contacts <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Direct Reach <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Social Connects <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Datasheets <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">About Us <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Service <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our deep expertise and end-to-end capabilities help you navigate complex IT challenges.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Webinars <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Presentations <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">PoCs <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Knowledgebase <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Events <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings service offerings </p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Online <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Venues <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Newsroom <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Career <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Join our team <i class="fa-solid fa-angle-right"></i></a>
+                                        <a href="">Available Jobs <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">Icon</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">Request Service Call</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">Request Events</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">Request Free Trainings</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_item">			
+                        <button class="country-btn-portugal">Shop <i class="fa-solid fa-caret-down"></i></button>     
+                        <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                            <!--Sub menu 5-->
+                            <div class="back_menu">
+                                <div class="country-btn-portugal back_button_style"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                            </div>
+                            <div class="sub_menu">
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Product <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Null <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Brand <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Null <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">By Category <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Harness the power of technology to achieve your most ambitious goals. </p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Null <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="colum-3 colum-12">
+                                    <h3 class="toggleDetails">Empty <i class="fa-solid fa-angle-right mb_sh float-right"></i></h3>
+                                    <p>Our service offerings drive new business outcomes.</p>
+                                    <div class="details hidden sub_sub_item">
+                                        <a href="">Null <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_menu_footer">
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Industries</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Solutions</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Technology</a> 
+                                </div>
+                                <div class="sub_menu_footer_item">
+                                    <a href="">View All Contents</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        
+            <!--Search-->
+            <div class="search_menu display_none" id="Search_menu">
+                <div class="header_search">
+                    <input type="search" placeholder="What can we help you find?">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <table class="table ">
-      <thead>
-        <tr class="bg-dark text-white">
-          <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Date</th>
-          <th scope="col" class="text-end">Page link</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Web Design - Admin Dashboard</td>
-          <td>(1 to 6 - GR) (4, 5, 7-WEB)</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-danger text-danger">Not Here</a></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Web Design - Single Product View Page</td>
-          <td>08-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/single_product.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Web Design - All Solution Pages</td>
-          <td>15-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/solution_all.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Web Design - Solution Filter Page</td>
-          <td>12-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/solution_filters.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Web Design - Single Solution View Page</td>
-          <td>11-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/solution_blog_page.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Web Design - Client Stories Insert Page</td>
-          <td>14-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/solution_blog_insert.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>Github Clone & Laravel View Page Setup</td>
-          <td>13-09-2022</td>
-          <td class="text-end"><button  href="#" class="btn btn-outline-danger text-danger">Solution</button></td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>Web Design - Product Filter Page</td>
-          <td>17-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/product_filters.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>Web Design - Common Product Page</td>
-          <td>19-09-2022 (18 to 19)</td>
-          <td class="text-end"><a target="_blank" href="ngenit/common_product.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>Web Design - User Dashboard Page </td>
-          <td>21-09-2022 (20 to 21)</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td>Web Design - Order Tracking Page</td>
-          <td>22-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_track_order.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">12</th>
-          <td>Web Design - Client Dashboard Content-Resources</td>
-          <td>25-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/content_resources.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">13</th>
-          <td>Web Design - Personal Product List</td>
-          <td>27-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_add_product.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">14</th>
-          <td>Web Design - Profile & Details</td>
-          <td>27-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_profile.html" class="btn btn-info">View </a></td>
-        </tr>
-        <tr>
-          <th scope="row">15</th>
-          <td>Web Design - Resources Webside (Techfoucs)</td>
-          <td>28-09-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
-        </tr>
-        <tr>
-          <th scope="row">16</th>
-          <td>Web Design - Resources Webside (Techfoucs)</td>
-          <td>29-09-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
-        </tr>
-        <tr>
-          <th scope="row">17</th>
-          <td>Graphic Design - Make 8-10 Logo</td>
-          <td>01-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://drive.google.com/file/d/17oS5xEMe_RTzYaszhW2Ph8NMZNcmQzTJ/view?usp=sharing" class="btn btn-success">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">18</th>
-          <td>Web Design - Resources Webside - Linquip</td>
-          <td>02-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://www.linquip.com/" class="btn btn-warning">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">19</th>
-          <td>Graphic Design - Techfoucs</td>
-          <td>03-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://drive.google.com/file/d/1S_aD7oENGY_9_AfV8noDXsjTmL7NvKh5/view?usp=sharing" class="btn btn-success">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">20</th>
-          <td>XL - List Dashboard Pages & Resources</td>
-          <td>04-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1hqwsqzlBA-PsLZT4tHiQFtGT6vLTUznX/edit#gid=1242053461" class="btn btn-warning">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">21</th>
-          <td>Web Design - Confirm Dashboard</td>
-          <td>05-10-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-success text-success">Finding</a></td>
-        </tr>
-        <tr>
-          <th scope="row">22</th>
-          <td>Web Design - Sketch Dashboard XL</td>
-          <td>06-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://docs.google.com/spreadsheets/d/14taebN35VkXiXx75rjYHzMm-Fwz9LZGgyuNVlUxJ7BQ/edit#gid=86182798" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">23</th>
-          <td>Web Design - Privacy policy</td>
-          <td>11-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/privacy_policy.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">24</th>
-          <td>Web Design - Web Accessibility Page</td>
-          <td>12-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/web_accessibility.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">25</th>
-          <td>Web Design - All Terms & Policies</td>
-          <td>13-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/terms_policy.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">26</th>
-          <td>Web Design - Sitemap</td>
-          <td>15-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/sitemap.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">27</th>
-          <td>Web Design - Cookies Setting Pop-up</td>
-          <td>16-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/terms_policy.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">28</th>
-          <td>Web Design - Tech Golssary</td>
-          <td>17-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/tech_glossary.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">29</th>
-          <td>Web Design - Single Tech Golssary</td>
-          <td>18-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/single_tech_glossary.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">30</th>
-          <td>Learning to Laravel (5 day)</td>
-          <td>19-10 To 25-10</td>
-          <td class="text-end"><a target="_blank" href="ngenit/single_tech_glossary.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">31</th>
-          <td>Electicity Problem</td>
-          <td>26-10-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-danger text-danger">Error</a></td>
-        </tr>
-        <tr>
-          <th scope="row">32</th>
-          <td>Web Design - Backend Page Update</td>
-          <td>27-10-2022</td>
-          <td class="text-end"><a target="_blank" href="" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">33</th>
-          <td>Web Design - Backend Page Update</td>
-          <td>29-10-2022</td>
-          <td class="text-end"><a target="_blank" href="" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">34</th>
-          <td>Web Design - Feedback Modal Page 1/2</td>
-          <td>30-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/terms_policy.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">35</th>
-          <td>Web Design - Feedback Modal Page Complete</td>
-          <td>31-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/terms_policy.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">36</th>
-          <td>Web Design - Tech deals</td>
-          <td>01-11-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/tech_deals.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">37</th>
-          <td>Web Design - Account benefits</td>
-          <td>02-11-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/account_benefits.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">38</th>
-          <td>Web Design - Refurbished products</td>
-          <td>03-11-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/tech_deals.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">39</th>
-          <td>Backend - Create, Update and Delete notification</td>
-          <td>06-11-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-danger text-danger">Invisible</a></td>
-        </tr>
-        <tr>
-          <th scope="row">40</th>
-          <td>Web Design - Web support assistance</td>
-          <td>07-11-2022</td>
-          <td class="text-end"><a href="ngenit/support_assistance.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">41</th>
-          <td>Web Design - Apply Job Part (Resources & Fixed)</td>
-          <td>08-11-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-success text-success">Finding</a></td>
-        </tr>
-        <tr>
-          <th scope="row">42</th>
-          <td>Web Design - View Job Post Page</td>
-          <td>09-11-2022</td>
-          <td class="text-end"><a href="ngenit/job_post.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">43</th>
-          <td>Web Design - View Job Post Details</td>
-          <td>10-11-2022</td>
-          <td class="text-end"><a href="ngenit/job_post_details.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">43</th>
-          <td>Web Design - Change Some page Design</td>
-          <td>13-11-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-success text-success">Solving</a></td>
-        </tr>
-        <tr>
-          <th scope="row">43</th>
-          <td>Web Design - Nasted Tab Menu</td>
-          <td>14-11-2022</td>
-          <td class="text-end"><a href="menu/nasted_tab.html" class="btn btn-info">View</a></td>
-        </tr>
-        <tr>
-          <th scope="row">43</th>
-          <td>Web Design - Job Apply Form Page</td>
-          <td>15-11-2022</td>
-          <td class="text-end"><a href="ngenit/job_apply.html" class="btn btn-info">View</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <!--======// Banner Section //======-->
+    <section class="banner_section">
+        <!-- slider -->
+        <div class="banner_slider">
+            <!-- slider -->
+            <div class="slider_inage">
+                <img src="Hasiful/assets/image/slider/insightbanner.jpg" alt="">
+            </div>
 
-  </section>
+            <!-- slider -->
+            <div class="slider_inage">
+                <img  src="Hasiful/assets/image/slider/insightbanner.jpg" alt="">
+            </div>
 
-  <!-- <div style="background-color: rgba(150, 150, 150, 0.5); overflow: hidden; position: fixed; left: 0px; top: 0px; bottom: 0px; right: 0px; z-index: 1000; display:block;">
-    <div style="
-    background-color: rgb(255, 255, 255); 
-    width: 600px; 
-    position: static; 
-    margin: 20px auto; 
-    padding: 20px 30px 0px; top: 110px; 
-    overflow: hidden; z-index: 1001; 
-    box-shadow: 0px 3px 8px rgba(34, 25, 25, 0.4);">
+            <!-- slider -->
+            <div class="slider_inage">
+                <img src="Hasiful/assets/image/slider/insightbanner.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- banner start end-->
+
+    <!--======// Home Cart Section //======-->
+    <section class="home_card_wrapper">
+        <div class="container">
+            <!-- wrapper -->
+            <div class="row m-0">
+                <!-- home card item -->
+                <div class="col-lg-6 col-sm-12">
+                    <div class="home_card_item">
+                        <h5 class="home_card_item_title">Explore NGen IT solutions</h5>
+                        <div href="" class="home_card_button">
+                            <a href="">View Solutions</a>
+                        </div>
+                        <!-- button -->
+                    </div>
+                </div>
+                
+
+                <!-- home card item -->
+                <div class="col-lg-6 col-sm-12">
+                    <div class="home_card_item">
+                        <h5 class="home_card_item_title">Shop products</h5>
+                        <div href="" class="home_card_button">
+                            <a href="ngenit/common_product.html">Shop Now</a>
+                        </div>
+                        <!-- button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home card end -->
+
+    <!--======// Business section //======-->
+    <section class="container">
+        <!-- home title -->
+        <div class="home_title">
+            <h5 class="home_title_heading"> <Span>T</Span>op businesses across industries have trusted Insight to achieve their ambitious business goals.</h5>
+            <p class="home_title_text">Our technical expertise, broad solutions portfolio and supply chain capabilities give us the right resources and scale to achieve more for you.</p>
+        </div>
+
+        <!-- business content -->
+        <div class="container">
+            <div class="business_content_wrapper">
+                <!-- business item wrapper -->
+                <div class="row solution_business_item">
+                    <!-- item -->
+                    <div class="col-lg-2 col-sm-5 m-2 mx-auto">
+                        <!-- image -->
+                        <div class="business_item_icon">
+                            <img src="ngenit/images/business icon/outcomes-client-experience-icon.png" alt="">
+                        </div>
+
+                        <!-- content -->
+                        <div class="business_item_content">
+                            <p class="business_item_title">Client experience</p>
+                            <p class="business_item_text">Serve your customers better with the right IT infrastructure, hardware, software and applications.</p>
+                            <a href="" class="business_item_button"><span>Learn More</span> <span class="business_item_button_icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-sm-5 m-2 mx-auto">
+                        <!-- image -->
+                        <div class="business_item_icon">
+                            <img src="ngenit/images/business icon/outcomes-grow-revenue-icon.png" alt="">
+                        </div>
+
+                        <!-- content -->
+                        <div class="business_item_content">
+                            <p class="business_item_title">Client experience</p>
+                            <p class="business_item_text">Serve your customers better with the right IT infrastructure, hardware, software and applications.</p>
+                            <a href="" class="business_item_button"><span>Learn More</span> <span class="business_item_button_icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-sm-5 m-2 mx-auto">
+                        <!-- image -->
+                        <div class="business_item_icon">
+                            <img src="ngenit/images/business icon/outcomes-manage-cost-icon.png" alt="">
+                        </div>
+
+                        <!-- content -->
+                        <div class="business_item_content">
+                            <p class="business_item_title">Client experience</p>
+                            <p class="business_item_text">Serve your customers better with the right IT infrastructure, hardware, software and applications.</p>
+                            <a href="" class="business_item_button"><span>Learn More</span> <span class="business_item_button_icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-sm-5 m-2 mx-auto">
+
+                        <!-- image -->
+                        <div class="business_item_icon">
+                            <img src="ngenit/images/business icon/outcomes-mitigate-risk-icon.png" alt="">
+                        </div>
+
+                        <!-- content -->
+                        <div class="business_item_content">
+                            <p class="business_item_title">Client experience</p>
+                            <p class="business_item_text">Serve your customers better with the right IT infrastructure, hardware, software and applications.</p>
+                            <a href="" class="business_item_button"><span>Learn More</span> <span class="business_item_button_icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    <div class="col-lg-2 col-sm-5 m-2 mx-auto">
+
+                        <!-- image -->
+                        <div class="business_item_icon">
+                            <img src="ngenit/images/business icon/outcomes-operational-efficiencies-icon.png" alt="">
+                        </div>
+
+                        <!-- content -->
+                        <div class="business_item_content">
+                            <p class="business_item_title">Client experience</p>
+                            <p class="business_item_text">Serve your customers better with the right IT infrastructure, hardware, software and applications.</p>
+                            <a href="" class="business_item_button"><span>Learn More</span> <span class="business_item_button_icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- button -->
+        <div class="business_seftion_button">
+            <a href="Hasiful/allsoftware.html">Explore business outcomes</a>
+        </div>
+    </section>
+    <!---------End -------->
+
+    <!--======// Learn clint history //======-->
+    <section class="account_benefits_section_wp">
+        <div class="container">
+            <!-- title -->
+            <div class="section_title">
+                <h3 class="title_top_heading">Learn more in our client stories.</h3><br>
+            </div>
+
+            <div class="row">
+                <!--------item------->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="client_stories_item">
+                        <a href="#">
+                            <img class="img-fluid" src="ngenit/images/item/item (1).jpg" alt="">
+                            <h4>Tech journal</h6>
+                            <h3><strong>How Westerra Prioritized Digital Transformation in the Face of Disruption</strong></h3>
+                        </a>
+                        
+                    </div> 
+                </div>
+                <!--------item------->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="client_stories_item">
+                        <a href="">
+                            <img class="img-fluid" src="ngenit/images/item/item (2).jpg" alt="">
+                            <h4>Video</h6>
+                            <h3><strong>EcoStruxure IT Mainfreight Case Study</strong></h3>
+                        </a>
+                        
+                    </div> 
+                </div>
+                <!--------item------->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="client_stories_item">
+                        <a href="">
+                            <img class="img-fluid" src="ngenit/images/item/item (3).jpg" alt="">
+                            <h4>Tech journal</h6>
+                            <h3><strong>Acer and Google Chrome OS Partner for Sustainable Solutions</strong></h3>
+                        </a>
+                        
+                    </div> 
+                </div>
+                <!--------item------->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="client_stories_item">
+                        <a href="">
+                            <img class="img-fluid" src="ngenit/images/item/item (4).jpg" alt="">
+                            <h4>Free ebook</h6>
+                            <h3><strong>Discover the True Potential of Virtualization</strong></h3>
+                        </a>
+                        
+                    </div> 
+                </div>
+            </div>
+
+            <!-- button -->
+            <div class="learn_clint_history_btn">
+                <a href="">See all client stories</a>
+            </div>
+        </div>    
+    </section>
+    <!---------End -------->
+
+    <!--=======// Shop product //======-->
+    <section class="padding_top">
+        <div class="container">
+            <div class="row">
+                <!-- content -->
+                <div class="col-lg-6 col-sm-12">
+                    <div class="home_shop_product_wrapper">
+                        <h5> Shop products and hardware</h5>
+    
+                        <p>With more than 600,000 products and 7,500 in-house brand experts at your fingertips, we’ll get you the technology you need to achieve your goals. And, you can manage it all seamlessly through your myInsight account.</p>
+
+                        <div class="d-flex justify-content-start">
+                            <button class="common_button">Shop Now</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- product brand -->
+                <div class="col-lg-6 col-sm-12">
+                    <ul class="shop_product_brand_list">
+                        <li><a href="">Product categories</a></li>
+                        <li><a href="">Brands</a></li>
+                        <li><a href="">Tech deals</a></li>
+                        <li><a href="">Account benefits</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--=======// Popular products //======-->
+    <section class="popular_product_section section_padding">
+        <!-- container -->
+        <div class="container">
+            <div class="popular_product_section_content">
+                <!-- section title -->
+                <div class="">
+                    <h3 class="title_top_heading">Popular products</h3>
+                </div>
+                <!-- wrapper -->
+                <div class="populer_product_slider">
+
+                    <!-- product_item -->
+                    
+                    <div class="product_item">
+                        <!-- image -->
+                        <div class="product_item_thumbnail">
+                            <img src="ngenit/images/single_product/product4.jpg" alt="">
+                        </div>
+
+                        <!-- product content -->
+                        <div class="product_item_content">
+                            <a href="" class="product_item_content_name">Microsoft Wireless Desktop 2000 - keyboard and mouse set - QWERTY - US - black</a>
+
+                            <!-- price -->
+                            <div class="product_item_price">
+                                <span class="price_currency">usd</span>
+                                <span class="price_currency_value">$856</span>
+                            </div>
+
+                            <!-- button -->
+                            <a href="" class="product_button">Add to Basket</a>
+                        </div>
+
+                    </div>
+                    
+                    <div class="product_item">
+                        <!-- image -->
+                        <div class="product_item_thumbnail">
+                            <img src="ngenit/images/single_product/product2.jpg" alt="">
+                        </div>
+
+                        <!-- product content -->
+                        <div class="product_item_content">
+                            <a href="" class="product_item_content_name">Microsoft Wireless Desktop 2000 - keyboard and mouse set - QWERTY - US - black</a>
+
+                            <!-- price -->
+                            <div class="product_item_price">
+                                <span class="price_currency">usd</span>
+                                <span class="price_currency_value">$856</span>
+                            </div>
+
+                            <!-- button -->
+                            <a href="" class="product_button">Add to Basket</a>
+                        </div>
+
+                    </div>
+                    <div class="product_item">
+                        <!-- image -->
+                        <div class="product_item_thumbnail">
+                            <img src="ngenit/images/single_product/product3.jpg" alt="">
+                        </div>
+
+                        <!-- product content -->
+                        <div class="product_item_content">
+                            <a href="" class="product_item_content_name">Microsoft Wireless Desktop 2000 - keyboard and mouse set - QWERTY - US - black</a>
+
+                            <!-- price -->
+                            <div class="product_item_price">
+                                <span class="price_currency">usd</span>
+                                <span class="price_currency_value">$856</span>
+                            </div>
+
+                            <!-- button -->
+                            <a href="" class="product_button">Add to Basket</a>
+                        </div>
+
+                    </div>
+                    <div class="product_item">
+                        <!-- image -->
+                        <div class="product_item_thumbnail">
+                            <img src="ngenit/images/single_product/product4.jpg" alt="">
+                        </div>
+
+                        <!-- product content -->
+                        <div class="product_item_content">
+                            <a href="" class="product_item_content_name">Microsoft Wireless Desktop 2000 - keyboard and mouse set - QWERTY - US - black</a>
+
+                            <!-- price -->
+                            <div class="product_item_price">
+                                <span class="price_currency">usd</span>
+                                <span class="price_currency_value">$856</span>
+                            </div>
+
+                            <!-- button -->
+                            <a href="" class="product_button">Add to Basket</a>
+                        </div>
+
+                    </div>
+                    <div class="product_item">
+                        <!-- image -->
+                        <div class="product_item_thumbnail">
+                            <img src="ngenit/images/single_product/product2.jpg" alt="">
+                        </div>
+
+                        <!-- product content -->
+                        <div class="product_item_content">
+                            <a href="" class="product_item_content_name">Microsoft Wireless Desktop 2000 - keyboard and mouse set - QWERTY - US - black</a>
+
+                            <!-- price -->
+                            <div class="product_item_price">
+                                <span class="price_currency">usd</span>
+                                <span class="price_currency_value">$856</span>
+                            </div>
+
+                            <!-- button -->
+                            <a href="" class="product_button">Add to Basket</a>
+                        </div>
+
+                    </div>
+                    <!-- product item -->
 
 
-        <iframe src="ngenit/client_dashboard.html"></iframe>
-    </div>
-</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------End -------->
 
-</script>
-  
-  <section class="footer">
-    <h4 class="bg-dark text-primary p-2 text-center">Daily Report - Motiur Rahman</h4>
-  </section>
+    <!--======// Magazine Section //======-->
+    <section class="account_benefits_section_wp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <img class="img-fluid" src="Hasiful/assets/image/clint/magazine.png" alt="">
+                </div>
+                <div class="col-lg-6 col-sm-12 account_benefits_section">
+                    <h3>Tech Journal magazine</h3>
+                    <h5>The Automation Imperative</h5>
+                    <p>From the intelligent edge and employee experience tracking to application modernization and next-gen retail solutions, discover the technology transforming how we do business, interact with our world and engage with one another.</p>
+
+                    <ul>
+                        <li>Shop thousands of hardware solutions.</li>
+                        <li>Access software from leading developers.</li>
+                        <li>Manage purchases, renewals, costs and more.</li>
+                    </ul>
+                    <button class="common_button2">Read the magazine</button>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <!----------End--------->
+
+    <!--======// our success section //======-->
+    <section class="container">
+        <div class="our_success_wrapper">
+            <!-- title -->
+            <div class="section_title">
+                <h3 class="title_top_heading">Our success starts with our culture.</h3>
+            </div>
+            <!-- wrapper -->
+            <div class="row">
+                <!-- item -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="our_success_item">
+                        <p class="our_success_item_title">Hunger</p>
+                        <div class="our_success_item_body">
+                            We are change agents, united in our passion to improve every day and deliver outstanding results for our clients, partners and Insight.
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="our_success_item">
+                        <p class="our_success_item_title our_success_item_title2">Hunger</p>
+                        
+                        <div class="our_success_item_body">
+                            We are change agents, united in our passion to improve every day and deliver outstanding results for our clients, partners and Insight.
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="our_success_item"> 
+                        <p class="our_success_item_title our_success_item_title3">Hunger</p>
+                        
+                        <div class="our_success_item_body">
+                            We are change agents, united in our passion to improve every day and deliver outstanding results for our clients, partners and Insight.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=======// Footer Section//=========-->
+    <footer class="container-fluid p-0">
+        <!-- footyer gradient -->
+        <div class="footer_top">
+            <p>We deliver Insight Intelligent Technology Solutions™ expertise.</p>
+        </div>
+
+        <!-- main footer -->
+        <div class="footer_middle">
+            <div class="row footer_middle_wrapper">
+                <!-- item -->
+                <div class="col-lg-4 col-md-8 col-sm-12 footer_item_wrapper">
+                    <!-- title -->
+                    <h6>Newsletter</h6>
+                    <!-- text -->
+                    <p>Sign up to receive the IT content that matters most to you. You can update your preferences or unsubscribe any time.</p>
+                    <!-- button -->
+                    <button href="" class="common_button2">Sign up for our newsletter</button>
+
+                    <div class="footer_item_logo">
+                        <h6><a href="#">Read the magazine</a></h6>
+                        <img src="images/footerLogo.png" alt="">
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6>About NgenIt</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Company overview</a></li>
+                            <li><a href="">Principal</a></li>
+                            <li><a href="">Partners</a></li>
+                            <li><a href="">Clients</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Products & Services</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Products</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Solutions</a></li>
+                            <li><a href="">Industry</a></li>
+                            <li><a href="">TechViews</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Features & Knowledge </h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Knowledge base</a></li>
+                            <li><a href="">NGEN IT Account</a></li>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="col-lg-2 col-md-4 col-sm-6 footer_item_wrapper">
+                    <!-- title -->
+                    <h6 class="main_footer_item_title">Help And Support</h6>
+                    <!-- nav list -->
+                    <div class="footer_nav_list">
+                        <ul>
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Order Helps</a></li>
+                            <li><a href="">Order Tracks</a></li>
+                            <li><a href="">Supports</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer social -->
+        <div class="social_icon_wrapper">
+            <div class="footer_social_icon">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- footer bottom -->
+
+        <div class="footer_bottom">
+            <div class="footer_bottom_wrapper">
+                <!-- copy -->
+                <div class="footer_copy">&copy NgenIt</div>
+                <!-- footer bottom list -->
+                <div class="footer_bottom_list">
+                    <ul>
+                        <li><a href="./privacy_policy.html">Privacy policy</a></li>
+                        <li><a href="./terms_policy.html">All Terms & Policies</a></li>
+                        <li><a href="./web_accessibility.html">Web Accessibility</a></li>
+                        <li><a href="./tech_glossary.html">Tech glossary</a></li>
+                        <li><a href="./sitemap.html">Sitemap</a></li>
+                        <li><label for="show_cookies">Cookies settings</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!----------End--------->
+
+    <!--=======// Cookises Modals //=======-->
+    <section class="cookises_settings_wrapper">
+        
+        <input type="checkbox" id="show_cookies">
+        <!-- <label for="show_cookies">View Form</label> -->
+        
+        <!--Content Wrapper-->
+        <div class="cookises_settings_pop">
+            <label for="show_cookies" class="close-btn fas fa-times" title="close"></label>
+            <div class="modal_title_cookises">
+                <img src="images/ngenit.png" alt="">
+                <h2 class="align-middle">Privacy Preference Center</h2>
+            </div>
+            <!--------Cookies Tab content-------->
+            <div id="Cookies" class="tab_cookises_wrapper">
+                <div class="tab_cookises_settings">
+                    <button class="tablinks" onclick="openCity(event, 'Privacy')" id="defaultOpen">Your privacy</button>
+                    <button class="tablinks" onclick="openCity(event, 'Strictly')">Strictly necessary cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Performance')">Performance cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Functional')">Functional cookies</button>
+                    <button class="tablinks" onclick="openCity(event, 'Targeting')">Targeting cookies</button>
+                </div>
+                
+                <div id="Privacy" class="tab_cookises_tabcontent">
+                    <h5>Your privacy</h5>
+                    <p>When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. You can get more information by going to our Privacy Policy or Statement in the footer of the website.</p>
+                </div>
+                
+                <div id="Strictly" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Strictly necessary cookies</h5>
+                        <h5 style="color: #ae0a46; display: inline;">Always active</h5>
+                    </div>
+                    
+                    <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms.    You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p>
+
+                    <a>Cookies details</a>
+                
+                </div>
+                
+                <div id="Performance" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Performance cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn" onclick="myCheckboxbtn()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. Most of these cookies collect and process aggregated (anonymized) information without identifying individuals. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+                
+                <div id="Functional" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Functional cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn1" onclick="myCheckboxbtn1()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages.    If you do not allow these cookies then some or all of these services may not function properly.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+                
+                <div id="Targeting" class="tab_cookises_tabcontent">
+                    <div class="d-flex justify-content-between">
+                        <h5>Targeting cookies</h5>
+                        <label class="switch">
+                            <input type="checkbox" id="myCheckboxbtn2" onclick="myCheckboxbtn2()" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites.    They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
+
+                    <a style="color: #ae0a46; cursor: pointer;" onclick="switchVisible();" value="Click" > Cookies details</a>
+                </div>
+            </div>
+            <!--------Cookies Details----------->
+            <div id="Cookies_details" class="Cookies_details_wrapper">
+                <div class="cookie_list_filter row d-flex">
+                    <div class="col-4 d-flex">
+                        <label onclick="switchVisible();" value="Click" ><i class="fa-solid fa-angle-left fa-xl"></i></label>
+                        <h5>Cookie List</h5>
+                    </div>
+                    <div class="col-8 d-flex justify-content-end">
+                        <form class="cookies_search_btn d-flex" action="">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                        <button class="cookie_filter_icon"><i class="fa-solid fa-filter fa-xl"></i></button>
+                    </div>     
+                </div>
+                <div class="cookie_list_content">
+                    <div class="cookie_list_content_item">
+                        <!--====///First///====-->
+                        <button class="collapsible">First party cookies</button>
+                        <div class="content">
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                        </div><br>
+
+                        <!--====///First///====-->
+                        <button class="collapsible">exchange.mediavine.com</button>
+                        <div class="content">
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                            </ul>
+
+                            <!--Item-->
+                            <ul>
+                                <li>
+                                    <div class="cookie_veiw_name">Name</div>
+                                    <div class="cookie_veiw_title">trwv.vc</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Host</div>
+                                    <div class="cookie_veiw_title">ngenit.com</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Duration</div>
+                                    <div class="cookie_veiw_title">A few seconds</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Type</div>
+                                    <div class="cookie_veiw_title">First Party</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Category</div>
+                                    <div class="cookie_veiw_title">Targeting cookies</div>
+                                </li>
+                                <li>
+                                    <div class="cookie_veiw_name">Description</div>
+                                    <div class="cookie_veiw_title">Marketo - These cookies store the total number of visits each visitor has to the Site, track email recipient behavior to measure campaign effectiveness and personalize Site content based on information known about the visitor.</div>
+                                </li>
+                            </ul>
+                        </div><br>
+
+                    </div>
+                    
+                    
+                </div>            
+            </div>
+            <div class="modal_footer_cookises">
+                <div class="d-flex justify-content-between">
+                    <button class="btn_footer_cookises"><strong> Confirm choices</strong></button>
+                    <!--Show & Hide butoon-->
+                    <button class="btn_footer_cookises" id="btn_show"><strong> Allow cookises</strong></button>
+                </div>
+
+                <div class="text_footer_cookises">
+                    <p>Powered by<span class="text-success h6">OneTrust</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------End--------->
+
+    <!--=======// Feedback Modals //=======-->
+    <section>
+        <div id="feedback_Sidebar" class="feedbacksidebar">
+            <div class="feedback_header_logo">
+                <button class="close_feedback" onclick="feedbackButtonClicked()"><i class="close-btn fas fa-times"></i></button>
+                <div class="modal_logo_feedback">
+                    <img src="images/ngenit.png" alt="">
+                </div>
+            </div>
+            <div style="height: 5px; width:100%; background: linear-gradient(90deg, #ae0a46, #a80b6e 25%, #582873 75%);margin: 5px 0px;"></div>
+            <div id="feedback" class="feedback_details">
+                <p>Thank you for assisting us with your feedback in this quick survey. Please take a minute to answer the questions below regarding your experience.<br><br>
+                    If you are experiencing an issue with your account, orders, or billing and want immediate assistance, please use our chat feature. </p>
+                <div class="d-flex justify-content-end">
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click">continue</button>
+                </div>
+            </div>
+            <div id="feedback_details" class="feedback_details" style="display: none;">
+                <p>What topic(s) would you like to provide feedback on?</p>
+    
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Product Details and availability
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+    
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Articles, reports, & blog content
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Purchasing, checkout & cart
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Pricing
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Solutions & services content
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+                <!--Check Box item-->
+                <div class="checkbox_wrapper">
+                    <label class="feedback_details_checkbox">Product search
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark_feedback"></span>
+                      </label>
+                </div>
+    
+                <p>Based on your selected topic(s) above, how would you rate your overall web experience?</p>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>5 (Best)</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>4</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>3</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>2</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <!--Check Rounded item-->
+                <div class="checkrounded_wrapper">
+                    <label class="feedback_details_checkrounded">
+                        <input type="checkbox">
+                        <p>1 (Worst)</p>
+                        <span class="checkmark_rounded"></span>
+                      </label>
+                </div>
+    
+                <div class="d-flex justify-content-between m-2">
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click"><i class="fa-solid fa-chevron-left"></i> previous</button>
+                    <button class="feedback_continue_btn" onclick="feedbackVisible();" value="Click">continue <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+          
+        <div id="feedback_btn">
+            <button id="sidebarButton_fb" class="openbtnfeedback" onclick="feedbackButtonClicked()"><i class="fa-solid fa-bullhorn"></i> Feedback</button>
+        </div>
+    </section>
+    <!----------End--------->
+    
+    <!--==============USE LINK================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="ngenit/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="ngenit/js/javascript.mr.js"></script>
+
+    <!-- slick slider -->
+    <script src="ngenit/js/slick.min.js"></script> 
+    <script src="ngenit/js/mains.js"></script>
 
 
-  <!------------------------------------------->
-  <!------------------------------------------
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-   
-   <style type="text/css">
-    button {
-        background: none !important;
-        border: none;
-        padding: 10px !important;
-    }
-    </style>
-
-  <section>
-    <button id="btnMoreLess" type="button" style="font-size: 24px; color: #61C8E0" onclick="ReadMoreLess()">
-        <i id="iMoreLess" class="fa fa-chevron-circle-right"></i>
-        &nbsp;&nbsp;<span id="lblText">See all open positions</span>
-    </button>
-    <p style="padding: 10px !important;">This is simple.<span id="dots">...</span></p>
-    <p id="more" style="padding: 10px !important; display: none;"><span>This is more Text.</span></p>
-  </section>
-   
-    <script type="text/javascript">
-        function ReadMoreLess() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var iMoreLess = document.getElementById("iMoreLess");
-            var lblText = document.getElementById("lblText");
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                iMoreLess.className = "fa fa-chevron-circle-right";
-                lblText.innerHTML = "See all open positions";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                iMoreLess.className = "fa fa-chevron-circle-down";
-                lblText.innerHTML = "Hide all open positions";
-                moreText.style.display = "inline";
-            }
-        }
-    </script>
-   ----------------------------------------->
-  <!------------------------------------------->
-
-  <!-- bootstrap jsBundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- jquery cdn -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  
 </body>
-
 </html>
