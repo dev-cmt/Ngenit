@@ -81,6 +81,25 @@ a {
 .common_button2:hover {
     background-color: var(--dark-crimson);
 }
+.common_button3 {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: "klinic-slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    color: #ae0a46;
+    transition: .3s;
+    outline: none;
+    border: none;
+}
+.common_button3:hover {
+    background-color: var(--navColor);
+    color: var(--bgColor);
+}
+
 .section_padding{
     padding: 60px 0px;
 }
@@ -104,6 +123,11 @@ a {
     color: #3e332d;
     border-top: .7px solid silver;
     border-bottom: .7px solid silver;
+}
+.section_wp2{
+    background: #f7f6f5;
+    padding: 40px 0px;
+    color: #3e332d;
 }
 /*-----End-----*/
 
@@ -3574,7 +3598,7 @@ switch input:checked+.slider {
 /*-----Contect Form-----*/
 .solution_contact_wrapper{
     background-color: #252525;
-    padding: 80px 0px;
+    padding: 40px 0px;
 }
 .thing_together_wrapper {
     padding: 0px 40px;
