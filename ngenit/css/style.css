@@ -57,13 +57,11 @@ a {
     color: #ae0a46;
     border: 1px solid #5f5753;
 }
-
 .common_button:hover {
     background-color: #5f5753;
     color: white;
     transition: .3s;
 }
-
 .common_button2 {
     padding: 15px 20px;
     cursor: pointer;
@@ -264,6 +262,7 @@ a {
 ----------------------*/
 .sub_menu_wrapper {
   z-index: 100;
+  width: 100%;
   display:none;
   opacity:0;
   background-color: #eee;
@@ -3603,7 +3602,6 @@ switch input:checked+.slider {
 .outcome_smail_bussiness_title {
     margin-bottom: 50px;
 }
-
 .outcome_smail_bussiness_title h2 {
     font-size: 36px;
     font-family: cursive;
