@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        var test_times  = {};
+        var test_page   = 'testpage.htm';
+        var content_div = document.getElementById('content');
+       function test_()
+       {
+           var xmlHttp = new XMLHttpRequest();
+
+           xmlHttp.onreadystatechange = function() {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                {
+                   content_div.innerHTML = xmlHttp.responseText;
+                   alert(new Date().getTime() - start);
+                }
+            };
+
+            start = new Date().getTime();
+
+            xmlHttp.open("GET", test_page, true); // true for asynchronous
+            xmlHttp.send(null);
+
+            // 1039
+        }
+        test_();
+    </script>
+</body>
+</html>

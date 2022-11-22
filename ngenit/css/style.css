@@ -1351,11 +1351,11 @@ background: #ae0a46; */
 .support_assistance_contact_us label{
     font-weight: bold;
 }
-/*===============================================*/
+/*==========================================*/
 /*========================
            Account Benefits Page
         ==========================*/
-/*================================================*/
+/*===========================================*/
 
 .account_benefits_header {
     background-image: url("../images/buy-category-hero.jpg");
@@ -1643,11 +1643,11 @@ background: #ae0a46; */
     font-weight: 100;
 }
 
-/*===============================================*/
+/*=======================================*/
 /*========================
            Feedback Page
         ==========================*/
-/*================================================*/
+/*=======================================*/
   .feedbacksidebar {
     height: 55%;
     width: 0;
@@ -2303,11 +2303,34 @@ switch input:checked+.slider {
     }
 }
 
-/*===============================================*/
+/*=========================================*/
+/*=================================
+          Brand Common page
+        ==========================*/
+/*========================================*/
+.brand_header_wrapper{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0px;
+}
+.brand_header_wrapper h1{
+    font-size: 42px;
+    font-family: cambria;
+    color: #fff;
+    text-align: center;
+}
+.brand_header_wrapper h3{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+/*=========================================*/
 /*=================================
           Tech glossary page
         ==========================*/
-/*================================================*/
+/*========================================*/
 .tech_glossary_header {
     background-position: center;
     background-repeat: no-repeat;
