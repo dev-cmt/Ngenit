@@ -289,13 +289,14 @@ a {
   margin-bottom: -4px;
 }
 .menu_item button{
-  border: none;
-  outline: none;
-  background: none;
+    position: relative;
+    border: none;
+    outline: none;
+    background: none;
   padding: 16px 8px;
   font-size: 16px;
   font-weight: 500;
-  border-bottom: 4.5px solid #efefef;
+  border-bottom: 4.5px solid none;
   transition: .4s;
 }
 .menu_item button:hover{
@@ -306,10 +307,6 @@ a {
   font-weight: 500;
   border-bottom: 4.5px solid #ae0a46;
 }
-.menu_item button:focus{
-  
-}
-
 
 
 /* Sub menu Button Design */
@@ -394,7 +391,18 @@ a {
 /*min-width:500px == anything > 500px*/
 
 
-@media screen and (min-width:1200px) {}
+@media screen and (min-width:1200px) {
+    .menu_item button:focus::after{
+        content: "";
+        position: absolute;
+        left: 40%;
+        border: solid transparent;
+        border-bottom: solid 10px #ae0a46;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+        top: 42px;
+    }
+}
 /*User iPads (landscape)*/
 @media screen and (max-width:992px) {
 
@@ -500,9 +508,10 @@ a {
   font-weight: 500;
   border-bottom: 1px solid #ae0a46;
 }
-.menu_item button:focus{
-  
-}
+
+
+
+
 
 .back_button_style{
   border: none;
@@ -4942,6 +4951,7 @@ switch input:checked+.slider {
 .client_dashboard_content_wp {
     padding: 20px;
     background:#fff;
+    width: 100%;
 }
 
 .client_dashboard_welcome_section {

@@ -1,5 +1,4 @@
 body {margin: 0; padding: 0;}
-
 .section_title{
     font-family: cambian;
     opacity:.9;
@@ -26,6 +25,47 @@ body {margin: 0; padding: 0;}
     color: #ae0a46;
 }.section_text_wrapper a:hover{
     color: #850635;
+}
+/*================================*/
+    /*=======================
+         Service single Page
+    =========================*/
+/*================================*/
+.managed_service_title{
+    padding: 0px 20%;
+}
+.managed_service_title h4{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 10px 0px;
+    font-family: cambria;
+    text-align: center;
+    opacity: 9.2;
+}
+.managed_service_title p{
+    font-size: 16px;
+    text-align: center;
+}
+.managed_service_title button{
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid silver;
+}
+.managed_service_item h5{
+    font-size: 28px;
+    font-weight: 400;
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    font-family: cambria;
+}
+.managed_service_item {}
+
+.serviceTopLine{
+    border-top: 2px solid #582873;
 }
 /*================================*/
     /*=======================
@@ -992,7 +1032,6 @@ body {margin: 0; padding: 0;}
     border-right: solid 30px transparent;
     top: 100%;
     margin-left: -30px;
-
 }
 .our_success_item_body {
     font-size: 16px;
