@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Solutions</title>
+    <title>Story filter Page</title>
 
+    <!--Fav-Icon-->
+    <link rel="icon" type="image/x-icon" href="images/ngenit.png">
 
-    <!-------cdn link------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <!-------CSS File------->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- slick slider -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    
+    <!-- Plugin link -->
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    
+    <!-- Css link -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!--======Featured client stories==========-->
+    <!--=======// Featured client stories //=======-->
     <div class="header_title_clinet_stories">
         <h1>Client stories</h1>
     </div>
     
-    <section class="container">
+    <section class="container padding_bottom">
         <div class="featured_client_stories_wrapper">
             <div class="featured_client_stories">
                 <div class="container">
@@ -81,12 +91,10 @@
         </div>
         
     </section>
-    <!----------Featured client stories End--------->
-    <br><br>
+    <!-------End------->
     <hr>
-    <br><br>
-    <!--============Content & Filter=============-->
-    <section class="container">
+    <!--=======// Content & Filter //=======-->
+    <section class="container section_padding">
         <!----------Filter Top-nav Bar --------->
         <div class="clinet_stories_filter_top_bar">
             <label>Results per page </label>
@@ -292,14 +300,18 @@
               </nav>
         </div>
     </section>
-    <br>
+    <!-------End------->
 
-    
+    <!--============///* USE LINK *///=============-->
+    <script src="lib/jquery/3.6.0/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/nasted.tab.js"></script>
+    <script src="js/javascript.mr.js"></script>
 
-
-
-    <!---================================================================--->
+    <!--============///* Story_filter *///=============-->
     <script>
         function myFunction() {
           var x = document.getElementById("filter_category");
@@ -311,6 +323,5 @@
         }
     </script>
 
-    <script src="libs/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>

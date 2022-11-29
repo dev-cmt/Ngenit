@@ -76,6 +76,24 @@ function iconSearch() {
     }
 };
 
+/*================/// Login And Signup Page ///==============*/
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+signupBtn.onclick = (() => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+});
+    loginBtn.onclick = (() => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+});
+    signupLink.onclick = (() => {
+    signupBtn.click();
+    return false;
+});
 /*================///User Dashboar Sidebar page ///==============*/
 var lastState = false;
 
@@ -94,6 +112,21 @@ function userDashboardSidebarClicked() {
         document.getElementById("userSideButton_wrapper").style.display = "block";
     }
 }
+
+//---------Sidebar menu Show Hide----------
+$(document).ready(function () {
+    $(".accordion-heading").click(function () {
+        if ($(".accordion-body").is(':visible')) {
+            $(".accordion-body").slideUp(600);
+            $(".plusminus").text('+')
+        }
+        else {
+            $(this).next(".accordion-body").slideDown(600);
+            $(this).children(".plusminus").text('-');
+        }
+    });
+});
+
 /*================///Feedback page ///==============*/
 //feedback open or close
 var lastState = false;

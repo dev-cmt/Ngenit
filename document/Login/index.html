@@ -5,9 +5,17 @@
     <title>Login & Signup Form | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+      html,body{display: grid;height: 100%;width: 100%;place-items: center;background: -webkit-linear-gradient(left, #a445b2, #fa4299);}
+      *{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Poppins', sans-serif;}
+    </style>
+
   </head>
   <body>
-    <div class="wrapper">
+    <section class="wrapper">
       <div class="title-text">
         <div class="title login">Login Form</div>
         <div class="title signup">Signup Form</div>
@@ -52,8 +60,7 @@
           </form>
         </div>
       </div>
-    </div>
-
+    </section>
     <script>
       const loginText = document.querySelector(".title-text .login");
       const loginForm = document.querySelector("form.login");
