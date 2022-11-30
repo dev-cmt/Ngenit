@@ -4595,12 +4595,6 @@ switch input:checked+.slider {
 .sidebarButtonStyle:hover {
     background-color: #8d867f;
 }
-  
-
-@media screen and (max-height: 450px) {
-    
-}
-/*---End----*/
 
 
 /*=====================================
