@@ -51,6 +51,72 @@
       font-weight: bold;
     }
   </style>
+  <style>
+    body{
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+.link_wrapper a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #f00;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #f00;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+.link_wrapper a:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.link_wrapper a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+  </style>
 </head>
 
 <body>
@@ -62,6 +128,21 @@
         <h4 class="animate-charcter" style="font-family: Audiowide">NGENT IT</h4>
       </div>
     </div>
+    <div style="width: 100%; padding:40px; background-color: #fff;position: relative;">
+      <div class="wrapper">
+        <div class="link_wrapper">
+          <a href="index.html">Live <i class="fa-solid fa-earth-asia"></i></a>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+              <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+            </svg>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
 
     <table class="table ">
       <thead>
@@ -107,13 +188,14 @@
           <th scope="row">6</th>
           <td>Web Design - Client Stories Insert Page</td>
           <td>14-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/story_blog_insert.html" class="btn btn-info">View </a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/story_blog_insert.html" class="btn btn-info">View </a>
+          </td>
         </tr>
         <tr>
           <th scope="row">7</th>
           <td>Github Clone & Laravel View Page Setup</td>
           <td>13-09-2022</td>
-          <td class="text-end"><button  href="#" class="btn btn-outline-danger text-danger">Solution</button></td>
+          <td class="text-end"><button href="#" class="btn btn-outline-danger text-danger">Solution</button></td>
         </tr>
         <tr>
           <th scope="row">8</th>
@@ -137,43 +219,51 @@
           <th scope="row">11</th>
           <td>Web Design - Order Tracking Page</td>
           <td>22-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_track_order.html" class="btn btn-info">View </a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_track_order.html"
+              class="btn btn-info">View </a></td>
         </tr>
         <tr>
           <th scope="row">12</th>
           <td>Web Design - Client Dashboard Content-Resources</td>
           <td>25-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/content_resources.html" class="btn btn-info">View </a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/content_resources.html" class="btn btn-info">View </a>
+          </td>
         </tr>
         <tr>
           <th scope="row">13</th>
           <td>Web Design - Personal Product List</td>
           <td>27-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_add_product.html" class="btn btn-info">View </a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_add_product.html"
+              class="btn btn-info">View </a></td>
         </tr>
         <tr>
           <th scope="row">14</th>
           <td>Web Design - Profile & Details</td>
           <td>27-09-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_profile.html" class="btn btn-info">View </a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/user_dashboard_profile.html" class="btn btn-info">View
+            </a></td>
         </tr>
         <tr>
           <th scope="row">15</th>
           <td>Web Design - Resources Webside (Techfoucs)</td>
           <td>28-09-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
+          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i
+                class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
         </tr>
         <tr>
           <th scope="row">16</th>
           <td>Web Design - Resources Webside (Techfoucs)</td>
           <td>29-09-2022</td>
-          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
+          <td class="text-end"><a href="#" class="btn btn-outline-secondary text-dark"><i
+                class="fa-sharp fa-solid fa-spinner"></i> Processing</a></td>
         </tr>
         <tr>
           <th scope="row">17</th>
           <td>Graphic Design - Make 8-10 Logo</td>
           <td>01-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://drive.google.com/file/d/17oS5xEMe_RTzYaszhW2Ph8NMZNcmQzTJ/view?usp=sharing" class="btn btn-success">View</a></td>
+          <td class="text-end"><a target="_blank"
+              href="https://drive.google.com/file/d/17oS5xEMe_RTzYaszhW2Ph8NMZNcmQzTJ/view?usp=sharing"
+              class="btn btn-success">View</a></td>
         </tr>
         <tr>
           <th scope="row">18</th>
@@ -185,13 +275,17 @@
           <th scope="row">19</th>
           <td>Graphic Design - Techfoucs</td>
           <td>03-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://drive.google.com/file/d/1S_aD7oENGY_9_AfV8noDXsjTmL7NvKh5/view?usp=sharing" class="btn btn-success">View</a></td>
+          <td class="text-end"><a target="_blank"
+              href="https://drive.google.com/file/d/1S_aD7oENGY_9_AfV8noDXsjTmL7NvKh5/view?usp=sharing"
+              class="btn btn-success">View</a></td>
         </tr>
         <tr>
           <th scope="row">20</th>
           <td>XL - List Dashboard Pages & Resources</td>
           <td>04-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1hqwsqzlBA-PsLZT4tHiQFtGT6vLTUznX/edit#gid=1242053461" class="btn btn-warning">View</a></td>
+          <td class="text-end"><a target="_blank"
+              href="https://docs.google.com/spreadsheets/d/1hqwsqzlBA-PsLZT4tHiQFtGT6vLTUznX/edit#gid=1242053461"
+              class="btn btn-warning">View</a></td>
         </tr>
         <tr>
           <th scope="row">21</th>
@@ -203,7 +297,9 @@
           <th scope="row">22</th>
           <td>Web Design - Sketch Dashboard XL</td>
           <td>06-10-2022</td>
-          <td class="text-end"><a target="_blank" href="https://docs.google.com/spreadsheets/d/14taebN35VkXiXx75rjYHzMm-Fwz9LZGgyuNVlUxJ7BQ/edit#gid=86182798" class="btn btn-info">View</a></td>
+          <td class="text-end"><a target="_blank"
+              href="https://docs.google.com/spreadsheets/d/14taebN35VkXiXx75rjYHzMm-Fwz9LZGgyuNVlUxJ7BQ/edit#gid=86182798"
+              class="btn btn-info">View</a></td>
         </tr>
         <tr>
           <th scope="row">23</th>
@@ -215,7 +311,8 @@
           <th scope="row">24</th>
           <td>Web Design - Web Accessibility Page</td>
           <td>12-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/web_accessibility.html" class="btn btn-info">View</a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/web_accessibility.html" class="btn btn-info">View</a>
+          </td>
         </tr>
         <tr>
           <th scope="row">25</th>
@@ -245,7 +342,8 @@
           <th scope="row">29</th>
           <td>Web Design - Single Tech Golssary</td>
           <td>18-10-2022</td>
-          <td class="text-end"><a target="_blank" href="ngenit/tech_glossary_single.html" class="btn btn-info">View</a></td>
+          <td class="text-end"><a target="_blank" href="ngenit/tech_glossary_single.html" class="btn btn-info">View</a>
+          </td>
         </tr>
         <tr>
           <th scope="row">30</th>
@@ -391,13 +489,20 @@
           <td>29-11-2022</td>
           <td class="text-end"><a href="ngenit/category_single.html" class="btn btn-info">View</a></td>
         </tr>
+        <tr>
+          <th scope="row">50</th>
+          <td>Web Design - About us (All Page Check and fixed Problem)</td>
+          <td>30-11-2022</td>
+          <td class="text-end"><a href="ngenit/about_us.html" class="btn btn-info">View</a></td>
+        </tr>
       </tbody>
     </table>
 
   </section>
   <section class="footer">
-      <h4 class="bg-dark text-primary p-2 text-center">Daily Report - Motiur Rahman</h4>
+    <h4 class="bg-dark text-primary p-2 text-center">Daily Report - Motiur Rahman</h4>
   </section>
+
   <!-- 
     <div style="background-color: rgba(150, 150, 150, 0.5); overflow: hidden; position: fixed; left: 0px; top: 0px; bottom: 0px; right: 0px; z-index: 1000; display:block;">
     <div style="
@@ -463,8 +568,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- jquery cdn -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  
 </body>
-
 </html>
